@@ -1,17 +1,15 @@
 
-// function singleNumber(nums) {
-//     const counter = {};
-//     nums.forEach(num => counter[num] = counter[num] ? counter[num] + 1 : 1);
-//     return +Object.keys(counter).filter(num => counter[num] === 1).join('');
-// }
-
+function singleNumber(nums) {
+    const counter = {};
+    nums.forEach(num => counter[num] = counter[num] ? counter[num] + 1 : 1);
+    return +Object.keys(counter).filter(num => counter[num] === 1).join('');
+}
 //*//
 // function singleNumber(nums) {
 //     return nums.reduce((res, num) => res ^ num, 0);
 // }
 //*//
-
-// singleNumber([4,1,2,1,2]);
+singleNumber([4,1,2,1,2]);
 
 // Merge Sorted Array (bad solution)
 function merge(nums1, m, nums2, n) {
@@ -23,5 +21,17 @@ function merge(nums1, m, nums2, n) {
         nums1[p--] = (nums1[p1] > nums2[p2]) ? nums1[p1--] : nums2[p2--];
     }
 }
-
 merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
+
+// Find the Index of the First Occurrence in a String
+function strStr(haystack, needle) {
+    if (!haystack.includes(needle)) return -1;
+    return haystack.indexOf(needle);
+}
+//*//
+// function strStr(haystack, needle) {
+//     return haystack.indexOf(needle);
+// }
+//*//
+
+strStr('sadbutsad', 'sad');
