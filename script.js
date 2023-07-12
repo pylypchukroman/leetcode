@@ -35,3 +35,28 @@ function strStr(haystack, needle) {
 //*//
 
 strStr('sadbutsad', 'sad');
+
+//Intersection of Two Arrays
+function intersection(nums1, nums2) {
+    const result = [];
+    for (const num of nums2) {
+        if (nums1.includes(num) && !result.includes(num)) {
+            result.push(num);
+        }
+    }
+    return result;
+}
+//*//
+// const intersection = function(nums1, nums2) {
+//     let result = [];
+//     for (let i = 0; i < nums1.length; i++) {
+//         if (nums2.includes(nums1[i]) && !result.includes(nums1[i])) {
+//             result.push(nums1[i]);
+//         }
+//     }
+//     return result;
+// };
+//*//
+
+intersection([4,9,5], [9,4,9,8,4]);
+
