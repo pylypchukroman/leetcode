@@ -60,3 +60,9 @@ function intersection(nums1, nums2) {
 
 intersection([4,9,5], [9,4,9,8,4]);
 
+//Contains Duplicate
+function containsDuplicate(nums) {
+    return nums.length !== new Set(nums).size;
+}
+
+containsDuplicate([1,2,3,4]);
