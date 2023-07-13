@@ -66,3 +66,12 @@ function containsDuplicate(nums) {
 }
 
 containsDuplicate([1,2,3,4]);
+
+//Uncommon Words from Two Sentences
+function uncommonFromSentences(s1, s2) {
+    const result = {};
+    s1.split(' ').concat(s2.split(' ')).forEach(word => result[word] = result[word] ? result[word] +1 : 1);
+    return Object.keys(result).filter(word => result[word] === 1);
+}
+
+uncommonFromSentences('this apple is sweet', 'this apple is sour');
