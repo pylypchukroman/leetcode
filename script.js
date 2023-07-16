@@ -120,4 +120,4 @@ function findTheDifference(s, t) {
     return '';
 }
 
-findTheDifference('abcd', 'abcde');
+console.log(findTheDifference('abcd', 'abcde'));
