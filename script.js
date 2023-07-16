@@ -75,3 +75,32 @@ function uncommonFromSentences(s1, s2) {
 }
 
 uncommonFromSentences('this apple is sweet', 'this apple is sour');
+
+//Move Zeroes
+function moveZeroes(nums) {
+    if (!nums.includes(0)) return nums;
+    nums.sort((a, b) => a - b);
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 0) {
+            nums.push(nums.splice(nums.indexOf(nums[i]), 1)[0]);
+        }
+    }
+    return nums;
+}
+//*//
+// function moveZeroes(nums) {
+//     let count = 0;
+//     for(let i = 0; i < nums.length; i++) {
+//         if(nums[i] !== 0) {
+//             nums[count] = nums[i];
+//             count++;
+//         }
+//     }
+//     for(let i = count; i < nums.length; i++) {
+//         nums[i] = 0;
+//     }
+//     return nums;
+// }
+//*//
+
+moveZeroes([0]);
