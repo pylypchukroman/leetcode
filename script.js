@@ -120,4 +120,16 @@ function findTheDifference(s, t) {
     return '';
 }
 
-console.log(findTheDifference('abcd', 'abcde'));
+findTheDifference('abcd', 'abcde');
+
+//Fizz Buzz
+function fizzBuzz(n) {
+    return Array(n).fill().map((_, i) => i+1).map(num => {
+        if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
+        if (num % 3 === 0) return 'Fizz';
+        if (num % 5 === 0) return 'Buzz';
+        return num.toString();
+    });
+}
+
+fizzBuzz(15);
