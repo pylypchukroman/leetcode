@@ -148,3 +148,10 @@ function countSegments(s) {
 }
 
 countSegments(', , , ,        a, eaefa');
+
+//Find All Numbers Disappeared in an Array
+function findDisappearedNumbers(nums) {
+    return new Array(nums.length).fill().map((_, i) => i + 1).filter(num => !nums.includes(num));
+}
+
+findDisappearedNumbers([1,1]);
