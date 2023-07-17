@@ -155,3 +155,15 @@ function findDisappearedNumbers(nums) {
 }
 
 findDisappearedNumbers([1,1]);
+
+//To Lower Case
+function toLowerCase(s) {
+    return s.split('').map(x => x === x.toUpperCase() ? x.toLowerCase() : x).join('');
+}
+//*//
+// function toLowerCase(s) {
+//     return s.toLowerCase();
+// }
+//*//
+
+toLowerCase('Hello');
