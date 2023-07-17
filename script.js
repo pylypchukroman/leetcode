@@ -141,3 +141,10 @@ function thirdMax(nums) {
 }
 
 thirdMax([3,3,4,3,4,3,0,3,3]);
+
+//Number of Segments in a String
+function countSegments(s) {
+    return s.split(' ').filter(x => x !== '').length;
+}
+
+countSegments(', , , ,        a, eaefa');
