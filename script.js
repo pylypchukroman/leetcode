@@ -133,3 +133,11 @@ function fizzBuzz(n) {
 }
 
 fizzBuzz(15);
+
+//Third Maximum Number
+function thirdMax(nums) {
+    const result = [...new Set(nums)].sort((a, b) => a - b);
+    return result[result.length - 3] !== undefined ? result[result.length - 3] : result[result.length - 1];
+}
+
+thirdMax([3,3,4,3,4,3,0,3,3]);
