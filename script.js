@@ -175,3 +175,13 @@ function capitalizeTitle(title) {
 }
 
 capitalizeTitle('First leTTeR of EACH Word');
+
+//Detect Capital
+function detectCapitalUse(word) {
+    const lowercaseOnly = /^[a-z]+$/g;
+    const uppercaseOnly = /^[A-Z]+$/g;
+    const capitalize = /^[A-Z][a-z]*$/;
+    return lowercaseOnly.test(word) || uppercaseOnly.test(word) || capitalize.test(word);
+}
+
+detectCapitalUse('FlaG');
