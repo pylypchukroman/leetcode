@@ -204,3 +204,12 @@ function searchInsert(nums, target) {
 }
 
 searchInsert([1,3,5,6], 2);
+
+//First Unique Character in a String
+function firstUniqChar(s) {
+    let result = {};
+    s.split('').forEach(x => result[x] = result[x] ? result[x] + 1 : 1);
+    return s.indexOf(Object.keys(result).find(x => result[x] === 1));
+}
+
+firstUniqChar('aabb');
