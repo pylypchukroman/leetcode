@@ -167,3 +167,11 @@ function toLowerCase(s) {
 //*//
 
 toLowerCase('Hello');
+
+//Capitalize the Title
+
+function capitalizeTitle(title) {
+    return title.split(' ').map(word => word.length <= 2 ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.toLowerCase().slice(1)).join(' ');
+}
+
+capitalizeTitle('First leTTeR of EACH Word');
