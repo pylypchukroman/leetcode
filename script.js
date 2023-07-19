@@ -248,3 +248,23 @@ function reverseWords(s) {
 }
 
 reverseWords('God Ding');
+
+//Binary Search
+function search(nums, number) {
+    let left = 0;
+    let right = nums.length - 1;
+    let middle;
+    while (left <= right) {
+        middle = Math.round((right - left) / 2) + left ;
+        if (nums[middle] === number) {
+            return middle;
+        } else if (nums[middle] < number) {
+            left = middle + 1
+        } else {
+            right = middle - 1
+        }
+    }
+    return  -1;
+}
+
+search([-1,0,3,5,9,12], 2);
