@@ -241,3 +241,10 @@ function romanToInt(s) {
 }
 
 romanToInt('MCMXCIV');
+
+//Reverse Words in a String III
+function reverseWords(s) {
+    return s.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
+
+reverseWords('God Ding');
