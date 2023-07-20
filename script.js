@@ -268,3 +268,13 @@ function search(nums, number) {
 }
 
 search([-1,0,3,5,9,12], 2);
+
+//Majority Element
+function majorityElement(nums) {
+    const result = {};
+    const len = nums.length / 2;
+    nums.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+    return +Object.keys(result).filter(num => result[num] > len).join('');
+}
+
+majorityElement([2,2,1,1,1,2,2]);
