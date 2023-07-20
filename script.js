@@ -278,3 +278,26 @@ function majorityElement(nums) {
 }
 
 majorityElement([2,2,1,1,1,2,2]);
+
+//Sqrt(x)
+function mySqrt(x) {
+    if (x < 0) return -1;
+    let sr = x / 2;
+    let temp = 0;
+    while (sr !== temp) {
+        temp = sr;
+        sr = (x / sr + sr) / 2
+    }
+    return Math.floor(sr);
+}
+//*//
+// function mySqrt(x) {
+//     let i=1;
+//     while(i*i<=x){
+//         i++;
+//     }
+//     return i-1
+// }
+//*//
+
+mySqrt(8);
