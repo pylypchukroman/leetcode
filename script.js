@@ -301,3 +301,10 @@ function mySqrt(x) {
 //*//
 
 mySqrt(8);
+
+//Add Strings
+function addStrings(num1, num2) {
+    return (BigInt(num1) + BigInt(num2)).toString();
+}
+
+addStrings('9333852702227987', '85731737104263');
