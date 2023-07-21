@@ -308,3 +308,19 @@ function addStrings(num1, num2) {
 }
 
 addStrings('9333852702227987', '85731737104263');
+
+//Excel Sheet Column Title
+function convertToTitle(columnNumber) {
+    let result = '';
+    while (columnNumber > 0){
+        let code = (--columnNumber) % 26;
+        result = String.fromCharCode(code + 65) + result;
+        columnNumber = (columnNumber - code) / 26
+    }
+
+    return result;
+}
+
+convertToTitle(28);
+
+
