@@ -323,4 +323,15 @@ function convertToTitle(columnNumber) {
 
 convertToTitle(28);
 
+//Excel Sheet Column Number
+function titleToNumber(columnTitle) {
+    let result = 0;
+    let index = 1;
+    for(let i = columnTitle.length - 1; i >= 0; i--) {
+        result += index * (columnTitle[i].charCodeAt() - 64);
+        index *= 26;
+    }
+    return result;
+}
 
+titleToNumber('ZY');
