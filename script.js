@@ -357,3 +357,15 @@ function longestCommonPrefix(strs) {
 }
 
 longestCommonPrefix(["flower","flow","flight"]);
+
+//Reverse String
+function reverseString(s) {
+    for (let i = 0, j = s.length - 1; i < j;) {
+        [s[i], s[j]] = [s[j], s[i]];
+        i++;
+        j--;
+    }
+    return s;
+}
+
+reverseString(["h","e","l","l","o"]);
