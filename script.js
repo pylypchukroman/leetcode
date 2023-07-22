@@ -335,3 +335,25 @@ function titleToNumber(columnTitle) {
 }
 
 titleToNumber('ZY');
+
+//Monotonic Array
+function isMonotonic(nums) {
+    return nums.every((num, i) => i === 0 || num >= nums[i - 1]) || nums.every((num, i) => i === 0 || num <= nums[i - 1]);
+}
+
+isMonotonic([1,3,2]);
+
+//Longest Common Prefix
+function longestCommonPrefix(strs) {
+    let result = strs[0];
+    for (let i = 1; i < strs.length; i++) {
+        while (!strs[i].startsWith(result)) {
+            const arr = result.split('');
+            arr.pop();
+            result = arr.join('');
+        }
+    }
+    return result;
+}
+
+longestCommonPrefix(["flower","flow","flight"]);
