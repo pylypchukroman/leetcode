@@ -381,3 +381,21 @@ function missingNumber(nums) {
 }
 
 missingNumber([9,6,4,2,3,5,7,0,1]);
+
+//Keyboard Row
+function findWords(words) {
+    const firsRow = 'qwertyuiop';
+    const secondRow = 'asdfghjkl';
+    const thirdRow = 'zxcvbnm';
+    const result = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].split('').every(x => secondRow.includes(x.toLowerCase()))
+            || words[i].split('').every(x => firsRow.includes(x.toLowerCase()))
+            || words[i].split('').every(x => thirdRow.includes(x.toLowerCase()))) {
+          result.push(words[i]);
+        }
+    }
+    return result;
+}
+
+findWords(["adsdf","sfd"]);
