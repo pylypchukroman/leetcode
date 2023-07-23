@@ -369,3 +369,15 @@ function reverseString(s) {
 }
 
 reverseString(["h","e","l","l","o"]);
+
+//Missing Number
+
+function missingNumber(nums) {
+    let i = 0;
+    while (nums.indexOf(i) !== -1) {
+        i++;
+    }
+    return i;
+}
+
+missingNumber([9,6,4,2,3,5,7,0,1]);
