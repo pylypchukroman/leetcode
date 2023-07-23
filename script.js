@@ -399,3 +399,22 @@ function findWords(words) {
 }
 
 findWords(["adsdf","sfd"]);
+
+//Relative Ranks {
+function findRelativeRanks(score) {
+    const newArr = [...score].sort((a,b)=>b-a);
+    return score.map(num => {
+        if (newArr.indexOf(num) === 0) {
+            return 'Gold Medal'
+        }
+        if (newArr.indexOf(num) === 1) {
+            return 'Silver Medal'
+        }
+        if (newArr.indexOf(num) === 2) {
+            return 'Bronze Medal'
+        }
+        return (newArr.indexOf(num) + 1).toString();
+    })
+}
+
+findRelativeRanks([10,3,8,9,4]);
