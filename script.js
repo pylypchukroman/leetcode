@@ -418,3 +418,11 @@ function findRelativeRanks(score) {
 }
 
 findRelativeRanks([10,3,8,9,4]);
+
+//Maximum Product of Three Numbers
+function maximumProduct(nums) {
+    nums.sort((a, b) => b - a);
+    return Math.max(nums[0] * nums[1] * nums[2], nums.at(-1) * nums.at(-2) * nums[0]);
+}
+
+maximumProduct([-1,-2,-3]);
