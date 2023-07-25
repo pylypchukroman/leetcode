@@ -484,3 +484,10 @@ function commonChars(words) {
 }
 
 commonChars(["cool","lock","cook"]);
+
+//Split Strings by Separator
+function splitWordsBySeparator(words, separator) {
+    return words.join(separator).split(separator).filter(word => word !== '');
+}
+
+splitWordsBySeparator(["$easy$","$problem$"], '$');
