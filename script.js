@@ -469,3 +469,18 @@ function duplicateZeros(arr) {
 }
 
 duplicateZeros([1,0,2,3,0,4,5,0]);
+
+//Find Common Characters
+function commonChars(words) {
+    const result = [];
+    const firstWord = words[0];
+    for (const letter of firstWord) {
+        if (words.every(word => word.includes(letter))) {
+            result.push(letter);
+            words = words.map(word => word.replace(letter, ''));
+        }
+    }
+    return result;
+}
+
+commonChars(["cool","lock","cook"]);
