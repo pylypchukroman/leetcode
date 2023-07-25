@@ -452,3 +452,20 @@ function nextGreatestLetter(letters, target) {
 }
 
 nextGreatestLetter(["c","f","j"], 'a');
+
+//Duplicate Zeros
+function duplicateZeros(arr) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            result.push(0);
+        }
+        result.push(arr[i]);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = result[i];
+    }
+    return arr;
+}
+
+duplicateZeros([1,0,2,3,0,4,5,0]);
