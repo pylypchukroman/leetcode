@@ -491,3 +491,29 @@ function splitWordsBySeparator(words, separator) {
 }
 
 splitWordsBySeparator(["$easy$","$problem$"], '$');
+
+//Sum Multiples
+function sumOfMultiples(n) {
+    let x = 1;
+    const result = []
+    while (x <= n) {
+        if (x % 3 === 0 || x % 5 === 0 || x % 7 === 0) {
+            result.push(x)
+        }
+        x++;
+    }
+    return result.length >= 1 ? result.reduce((acc, num) => acc += num) : [];
+}
+
+//*//
+// function sumOfMultiples(n) {
+//     let sum = 0;
+//     for(let i = 1; i < n+1; i++){
+//         if(i % 3 === 0 )sum += i;
+//         else if(i % 5 === 0 )sum += i;
+//         else if(i % 7 === 0 )sum += i;
+//     }
+//     return sum;
+// }
+
+sumOfMultiples(1);
