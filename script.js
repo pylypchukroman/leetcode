@@ -532,3 +532,10 @@ function minNumber(nums1, nums2) {
 }
 
 minNumber([7,5,6], [1,4]);
+
+//Separate the Digits in an Array
+function separateDigits(nums) {
+    return nums.join('').split('').map(num => +num);
+}
+
+separateDigits([13,25,83,77]);
