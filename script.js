@@ -517,3 +517,18 @@ function sumOfMultiples(n) {
 // }
 
 sumOfMultiples(1);
+
+//Form Smallest Number From Two Digit Arrays
+function minNumber(nums1, nums2) {
+    const x = [];
+    for (let i = 0; i < nums1.length; i ++) {
+        if (nums2.includes(nums1[i])) {
+            x.push(nums1[i]);
+        }
+    }
+    const result = x.length > 0 ? Math.min(...x) : +(Math.min(...nums1).toString() + Math.min(...nums2).toString());
+    const reverseResult = Number(result.toString().split('').reverse().join(''));
+    return result < reverseResult ? result : reverseResult;
+}
+
+minNumber([7,5,6], [1,4]);
