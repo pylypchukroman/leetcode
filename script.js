@@ -539,3 +539,23 @@ function separateDigits(nums) {
 }
 
 separateDigits([13,25,83,77]);
+
+//Minimum Common Value
+function getCommon(nums1, nums2) {
+    const set = new Set(nums1);
+    const result = nums2.filter(num => set.has(num))[0];
+    return result !== undefined ? result : -1;
+}
+//*//
+// function getCommon(nums1, nums2) {
+//     const result = [];
+//     for (let i = 0; i < nums1.length; i++) {
+//         if (nums2.includes(nums1[i])) {
+//             result.push(nums1[i]);
+//         }
+//     }
+//     return Math.min(...result);
+// }
+//*//
+
+getCommon([1,2,3], [2,4,3])
