@@ -559,3 +559,16 @@ function getCommon(nums1, nums2) {
 //*//
 
 getCommon([1,2,3], [2,4,3])
+
+//Find Numbers with Even Number of Digits
+function findNumbers(nums) {
+    const result = [];
+    for (let i = 0; i < nums.length; i ++) {
+        if (nums[i].toString().length % 2 === 0) {
+            result.push(nums[i]);
+        }
+    }
+    return result.length;
+}
+
+findNumbers([555,901,482,1771]);
