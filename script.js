@@ -582,4 +582,4 @@ function sortPeople(names, heights) {
     return result.sort((a, b) => b[1] - a[1]).map(a => a[0]);
 }
 
-console.log(sortPeople(["Mary","John","Emma"], [180,165,170]));
+sortPeople(["Mary","John","Emma"], [180,165,170]);
