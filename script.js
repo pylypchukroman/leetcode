@@ -572,3 +572,14 @@ function findNumbers(nums) {
 }
 
 findNumbers([555,901,482,1771]);
+
+//Sort the People
+function sortPeople(names, heights) {
+    let result = [];
+    for (let i = 0; i < names.length; i++){
+        result.push([names[i],heights[i]]);
+    }
+    return result.sort((a, b) => b[1] - a[1]).map(a => a[0]);
+}
+
+console.log(sortPeople(["Mary","John","Emma"], [180,165,170]));
