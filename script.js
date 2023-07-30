@@ -583,3 +583,20 @@ function sortPeople(names, heights) {
 }
 
 sortPeople(["Mary","John","Emma"], [180,165,170]);
+
+//Maximum Count of Positive Integer and Negative Integer
+function maximumCount(nums) {
+    const pos = [];
+    const neg = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) {
+            pos.push(nums[i]);
+        }
+        if (nums[i] < 0) {
+            neg.push(nums[i]);
+        }
+    }
+    return Math.max(pos.length, neg.length);
+}
+
+maximumCount([5,20,66,1314]);
