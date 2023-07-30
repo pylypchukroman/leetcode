@@ -609,3 +609,14 @@ function differenceOfSum(nums) {
 }
 
 differenceOfSum([1,15,6,3]);
+
+//Chunk Array
+function chunk(arr, size) {
+    const chunked = [];
+    for (let i = 0; i < arr.length; i += size) {
+        chunked.push(arr.slice(i, i + size));
+    }
+    return chunked;
+}
+
+chunk([1,2,3,4,5], 1);
