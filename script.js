@@ -600,3 +600,12 @@ function maximumCount(nums) {
 }
 
 maximumCount([5,20,66,1314]);
+
+//Difference Between Element Sum and Digit Sum of an Array
+function differenceOfSum(nums) {
+    const sum = nums.reduce((acc, num) => acc += num);
+    const digit = nums.join('').split('').map(num => +num).reduce((acc, num) => acc+= num);
+    return sum - digit;
+}
+
+differenceOfSum([1,15,6,3]);
