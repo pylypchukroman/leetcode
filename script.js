@@ -634,3 +634,10 @@ function maximumValue(strs) {
 }
 
 maximumValue(["alic3","bob","3","4","00000"]);
+
+//Remove Trailing Zeros From a String
+function removeTrailingZeros(num) {
+    return num.replace(/0+$/, "");
+}
+
+removeTrailingZeros("51230100");
