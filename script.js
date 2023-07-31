@@ -620,3 +620,17 @@ function chunk(arr, size) {
 }
 
 chunk([1,2,3,4,5], 1);
+
+//Maximum Value of a String in an Array
+function maximumValue(strs) {
+    const result = strs.map(str => {
+        if (!isNaN(Number(str))) {
+            return +str;
+        } else {
+            return str.length;
+        }
+    })
+    return Math.max(...result);
+}
+
+maximumValue(["alic3","bob","3","4","00000"]);
