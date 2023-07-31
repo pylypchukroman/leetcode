@@ -641,3 +641,10 @@ function removeTrailingZeros(num) {
 }
 
 removeTrailingZeros("51230100");
+
+//Generate a String With Characters That Have Odd Counts
+function generateTheString(n) {
+    return n % 2 !== 0 ? 'a'.repeat(n) : 'a'.repeat(n-1) + 'b';
+}
+
+generateTheString(10);
