@@ -672,3 +672,10 @@ function getConcatenation(nums) {
 }
 
 getConcatenation([1,3,2,1]);
+
+//Build Array from Permutation
+function buildArray(nums) {
+    return nums.map(num => nums[num]);
+}
+
+buildArray([0,2,1,5,3,4]);
