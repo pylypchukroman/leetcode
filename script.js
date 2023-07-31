@@ -648,3 +648,27 @@ function generateTheString(n) {
 }
 
 generateTheString(10);
+
+//Merge Intervals
+function merge2(intervals) {
+    const result = [];
+    for (let i = 1; i < intervals.length; i++) {
+        const [start, end] = intervals[i];
+        const [prevStart, prevEnd] = intervals[i - 1];
+        if (prevEnd >= start) {
+            result.push([prevStart,  end]);
+        } else {
+            result.push(intervals[i]);
+        }
+    }
+    return result;
+}
+
+merge2([[1,3],[2,6],[8,10],[15,18]]);
+
+//Concatenation of Array
+function getConcatenation(nums) {
+    return nums.concat(nums);
+}
+
+getConcatenation([1,3,2,1]);
