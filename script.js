@@ -686,3 +686,14 @@ function maximumWealth(accounts) {
 }
 
 maximumWealth([[1,5],[7,3],[3,5]]);
+
+//Smallest Even Multiple
+function smallestEvenMultiple(n) {
+    let result = 1;
+    while(result % 2 !== 0 || result % n !== 0) {
+        result++;
+    }
+    return result;
+}
+
+smallestEvenMultiple(6);
