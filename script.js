@@ -697,3 +697,11 @@ function smallestEvenMultiple(n) {
 }
 
 smallestEvenMultiple(6);
+
+//Running Sum of 1d Array
+function runningSum(nums) {
+    let rsum = 0;
+    return nums.map(x => rsum += x);
+}
+
+runningSum([1,2,3,4]);
