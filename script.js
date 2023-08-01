@@ -679,3 +679,10 @@ function buildArray(nums) {
 }
 
 buildArray([0,2,1,5,3,4]);
+
+//Richest Customer Wealth
+function maximumWealth(accounts) {
+    return Math.max(...accounts.map(account => account.reduce((acc, num) => acc += num)));
+}
+
+maximumWealth([[1,5],[7,3],[3,5]]);
