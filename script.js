@@ -705,3 +705,16 @@ function runningSum(nums) {
 }
 
 runningSum([1,2,3,4]);
+
+//Shuffle the Array
+function shuffle(nums, n) {
+    const result = [];
+    const left = nums.slice(0, n);
+    const right = nums.slice(n, nums.length);
+    for (let i = 0; i < left.length; i++) {
+        result.push(left[i], right[i]);
+    }
+    return result;
+}
+
+shuffle([2,5,1,3,4,7], 3);
