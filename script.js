@@ -746,3 +746,15 @@ function xorOperation(n, start) {
 }
 
 xorOperation(5, 0);
+
+//Count Items Matching a Rule
+function countMatches(items, ruleKey, ruleValue) {
+    const map = {
+        'type': 0,
+        'color': 1,
+        'name': 2
+    };
+    return items.filter(item => item[map[ruleKey]] === ruleValue).length;
+}
+
+countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver");
