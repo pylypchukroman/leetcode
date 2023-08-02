@@ -767,3 +767,18 @@ function sortSentence(s) {
 }
 
 sortSentence('is2 sentence4 This1 a3');
+
+//Maximum 69 Number
+function maximum69Number(num) {
+ return Number(num.toString().replace("6", "9"));
+}
+
+maximum69Number(9669);
+
+//Count Asterisks
+function countAsterisks(s) {
+    const n = s.split('|').filter((word, i) => i % 2 === 0).join('');
+    return n.length - n.replaceAll('*', '').length;
+}
+
+countAsterisks("yo|uar|e**|b|e***au|tifu|l");
