@@ -718,3 +718,10 @@ function shuffle(nums, n) {
 }
 
 shuffle([2,5,1,3,4,7], 3);
+
+//Kids With the Greatest Number of Candies
+function kidsWithCandies(candies, extraCandies) {
+    return candies.map(candie => candie + extraCandies >= Math.max(...candies));
+}
+
+kidsWithCandies([2,3,5,1,3], 3);
