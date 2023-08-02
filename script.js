@@ -758,3 +758,12 @@ function countMatches(items, ruleKey, ruleValue) {
 }
 
 countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver");
+
+//Sorting the Sentence
+function sortSentence(s) {
+    const arr = s.split(' ');
+    const sortedArr = arr.sort((a, b) => a[a.length - 1] - b[b.length - 1]);
+    return sortedArr.map(word => word.slice(0, -1)).join(' ');
+}
+
+sortSentence('is2 sentence4 This1 a3');
