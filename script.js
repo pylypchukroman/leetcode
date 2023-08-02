@@ -725,3 +725,17 @@ function kidsWithCandies(candies, extraCandies) {
 }
 
 kidsWithCandies([2,3,5,1,3], 3);
+
+//Left and Right Sum Differences
+function leftRightDifference(nums) {
+    const result = [];
+    let sum = 0;
+    const leftSum = nums.map(num => (sum += num) - num);
+    const rightSum = nums.map(num => (sum -= num));
+    for (let i = 0; i < leftSum.length; i++) {
+        result.push(Math.abs(leftSum[i] - rightSum[i]));
+    }
+    return result;
+}
+
+leftRightDifference([10,4,8,3]);
