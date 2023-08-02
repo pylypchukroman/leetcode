@@ -739,3 +739,10 @@ function leftRightDifference(nums) {
 }
 
 leftRightDifference([10,4,8,3]);
+
+//XOR Operation in an Array
+function xorOperation(n, start) {
+    return new Array(n).fill(start).map((num, i) => start + 2 * i).reduce((acc, num) => acc ^= num);
+}
+
+xorOperation(5, 0);
