@@ -782,3 +782,23 @@ function countAsterisks(s) {
 }
 
 countAsterisks("yo|uar|e**|b|e***au|tifu|l");
+
+//Reverse Prefix of Word
+function reversePrefix(word, ch) {
+    const index = Math.min(word.indexOf(ch))
+    const prefix = word.slice(0, index + 1).split('').reverse().join('');
+    const rest = word.slice(index + 1);
+    return prefix + rest;
+}
+
+reversePrefix('abcdefd', 'd');
+
+//Find Lucky Integer in an Array
+function findLucky(arr) {
+    const obj = {};
+    arr.forEach(num => obj[num] = obj[num] ? obj[num] + 1 : 1);
+    const result = Object.entries(obj).filter(num => Number(num[0]) === num[1]).map(num => num[1]);
+    return result.length < 1 ? -1 : Math.max(...result);
+}
+
+findLucky([2,2,2,3,3]);
