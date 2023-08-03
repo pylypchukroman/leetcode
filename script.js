@@ -809,3 +809,18 @@ function stringMatching(words) {
 }
 
 stringMatching(["mass","as","hero","superhero"]);
+
+//Number of Common Factors
+function commonFactors(a, b) {
+    let count = 0;
+    let n = 0;
+    while (n <= Math.min(a, b)) {
+        if (a % n === 0 && b % n === 0 ) {
+            count ++;
+        }
+        n++;
+    }
+    return count;
+}
+
+commonFactors(25, 30);
