@@ -824,3 +824,22 @@ function commonFactors(a, b) {
 }
 
 commonFactors(25, 30);
+
+//Find the Difference of Two Arrays
+function findDifference(nums1, nums2) {
+    const first = [];
+    const second = [];
+    for (let i = 0; i < nums1.length; i++) {
+        if (!nums2.includes(nums1[i])) {
+            first.push(nums1[i]);
+        }
+    }
+    for (let j = 0; j < nums2.length; j++) {
+        if (!nums1.includes(nums2[j])) {
+            second.push(nums2[j]);
+        }
+    }
+    return [[...new Set(first)], [...new Set(second)]];
+}
+
+findDifference([1,2,3], [2,4,6]);
