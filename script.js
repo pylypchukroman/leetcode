@@ -802,3 +802,10 @@ function findLucky(arr) {
 }
 
 findLucky([2,2,2,3,3]);
+
+//String Matching in an Array
+function stringMatching(words) {
+    return words.filter(word => words.some(w => w.includes(word) && w.length !== word.length));
+}
+
+stringMatching(["mass","as","hero","superhero"]);
