@@ -853,3 +853,17 @@ function sumOfUnique(nums) {
 }
 
 sumOfUnique([1,2,3,2]);
+
+//Find Target Indices After Sorting Array
+function targetIndices(nums, target) {
+    const sortedArr = nums.sort((a, b) => a - b);
+    const result = [];
+    for (let i = 0; i < sortedArr.length; i++) {
+        if (sortedArr[i] === target) {
+            result.push(i);
+        }
+    }
+    return result;
+}
+
+targetIndices([1,2,5,2,3], 2);
