@@ -843,3 +843,13 @@ function findDifference(nums1, nums2) {
 }
 
 findDifference([1,2,3], [2,4,6]);
+
+//Sum of Unique Elements
+function sumOfUnique(nums) {
+    const obj = {};
+    nums.forEach(num => obj[num] = obj[num] ? obj[num] + 1 : 1);
+    const result = Object.keys(obj).filter(num => obj[num] === 1).map(num => +num);
+    return result.length > 0 ? result.reduce((acc, num) => acc += num) : 0;
+}
+
+sumOfUnique([1,2,3,2]);
