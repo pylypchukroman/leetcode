@@ -867,3 +867,19 @@ function targetIndices(nums, target) {
 }
 
 targetIndices([1,2,5,2,3], 2);
+
+//Sort Array By Parity
+function sortArrayByParity(nums) {
+    const odd = [];
+    const even = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 0) {
+            odd.push(nums[i]);
+        } else {
+            even.push(nums[i]);
+        }
+    }
+    return odd.concat(even);
+}
+
+sortArrayByParity([3,1,2,4]);
