@@ -883,3 +883,16 @@ function sortArrayByParity(nums) {
 }
 
 sortArrayByParity([3,1,2,4]);
+
+//Percentage of Letter in String
+function percentageLetter(s, letter) {
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === letter) {
+            count++
+        }
+    }
+    return Math.floor((count / s.length) * 100);
+}
+
+percentageLetter("foobar", 'o');
