@@ -918,3 +918,19 @@ function repeatedCharacter(s) {
 }
 
 repeatedCharacter('abccbaacz');
+
+//Count Common Words With One Occurrence
+function countWords(words1, words2) {
+    const first = {};
+    const second = {};
+    const resultObj = {};
+    words1.forEach(word => first[word] = first[word] ? first[word] + 1 : 1);
+    words2.forEach(word => second[word] = second[word] ? second[word] + 1 : 1);
+    const uniqFirst = Object.keys(first).filter(word => first[word] === 1);
+    const uniqSecond = Object.keys(second).filter(word => second[word] === 1);
+    uniqFirst.concat(uniqSecond).forEach(word => resultObj[word] = resultObj[word] ? resultObj[word] + 1 : 1);
+    const result = Object.keys(resultObj).filter(word => resultObj[word] === 2)
+    return result.length;
+}
+
+countWords(["leetcode","is","amazing","as","is"], ["amazing","leetcode","is"]);
