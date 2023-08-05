@@ -905,3 +905,16 @@ function uniqueOccurrences(arr) {
 }
 
 uniqueOccurrences([1,2]);
+
+//First Letter to Appear Twice
+function repeatedCharacter(s) {
+    const set = new Set();
+    for (let i = 0; i < s.length; i += 1) {
+        if(set.has(s[i])) {
+            return s[i]
+        }
+        set.add(s[i]);
+    }
+}
+
+repeatedCharacter('abccbaacz');
