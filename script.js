@@ -896,3 +896,12 @@ function percentageLetter(s, letter) {
 }
 
 percentageLetter("foobar", 'o');
+
+//Unique Number of Occurrences
+function uniqueOccurrences(arr) {
+    const result = {};
+    arr.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+    return Object.values(result).length === new Set(Object.values(result)).size;
+}
+
+uniqueOccurrences([1,2]);
