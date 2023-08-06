@@ -934,3 +934,17 @@ function countWords(words1, words2) {
 }
 
 countWords(["leetcode","is","amazing","as","is"], ["amazing","leetcode","is"]);
+
+//Minimum String Length After Removing Substrings
+function minLength(s) {
+    while (s.includes('AB') || s.includes('CD')) {
+        if(s.includes("AB"))
+            s = s.replace("AB","")
+
+        if(s.includes("CD"))
+            s = s.replace("CD", '')
+    }
+    return s.length;
+}
+
+minLength('ABFCACDB');
