@@ -948,3 +948,11 @@ function minLength(s) {
 }
 
 minLength('ABFCACDB');
+
+//Smallest Range I
+function smallestRangeI(nums, k) {
+    const diff = Math.max(...nums) - Math.min(...nums) - (2 * k);
+    return diff < 0 ? 0 : diff;
+}
+
+console.log(smallestRangeI([1,3,6], 3));
