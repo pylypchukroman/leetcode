@@ -980,3 +980,19 @@ function findMaxK(nums) {
 }
 
 findMaxK([-10,8,6,7,-2,-3]);
+
+//Find the Distance Value Between Two Arrays
+function findTheDistanceValue(arr1, arr2, d) {
+    let result = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arr2.length; j++) {
+            if (Math.abs(arr1[i] - arr2[j]) <= d) count ++;
+        }
+        if (count === 0) result ++;
+    }
+
+    return result;
+}
+
+findTheDistanceValue([4,5,8], [10,9,1,8], 2);
