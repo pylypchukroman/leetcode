@@ -955,4 +955,4 @@ function smallestRangeI(nums, k) {
     return diff < 0 ? 0 : diff;
 }
 
-console.log(smallestRangeI([1,3,6], 3));
+smallestRangeI([1,3,6], 3);
