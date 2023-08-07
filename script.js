@@ -996,3 +996,23 @@ function findTheDistanceValue(arr1, arr2, d) {
 }
 
 findTheDistanceValue([4,5,8], [10,9,1,8], 2);
+
+//Calculate Money in Leetcode Bank
+function totalMoney(n) {
+    if (n <= 7) {
+        return (n * (n + 1)) / 2;
+    } else {
+        let total = 0;
+        const week = Math.floor(n / 7);
+        const rest = n % 7;
+        for (let i = 0; i < week; i++) {
+            total = total + 28 + i * 7;
+        }
+        for (let i = week + 1; i < week + 1 + rest; i++) {
+            total += i;
+        }
+        return total;
+    }
+}
+
+totalMoney(26);
