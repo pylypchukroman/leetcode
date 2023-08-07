@@ -970,3 +970,13 @@ function intersection(nums) {
 }
 
 intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]);
+
+//Largest Positive Integer That Exists With Its Negative
+function findMaxK(nums) {
+    const negative = nums.filter(num => num < 0);
+    const positive = nums.filter(num => num > 0);
+    const result = negative.filter(num => positive.includes(Math.abs(num)));
+    return result.length > 0 ? Math.max(...result.map(x => Math.abs(x))) : -1;
+}
+
+findMaxK([-10,8,6,7,-2,-3]);
