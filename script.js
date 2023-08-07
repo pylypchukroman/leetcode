@@ -956,3 +956,17 @@ function smallestRangeI(nums, k) {
 }
 
 smallestRangeI([1,3,6], 3);
+
+//Intersection of Multiple Arrays
+function intersection(nums) {
+    const result = [];
+    const target = nums[0];
+    for (let i = 0; i < target.length; i++) {
+        if (nums.every(num => num.includes(target[i]))) {
+            result.push(target[i]);
+        }
+    }
+    return result;
+}
+
+intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]);
