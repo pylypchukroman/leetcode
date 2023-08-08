@@ -1024,3 +1024,12 @@ function addDigits(num) {
 }
 
 addDigits(30);
+
+//Count Integers With Even Digit Sum
+function countEven(num) {
+    const arr = new Array(num).fill(0).map((num, i) => i + 1)
+    const filtered = arr.filter(num => num.toString().split('').map(num => +num).reduce((acc, num) => acc += num) % 2 === 0);
+    return filtered.length;
+}
+
+countEven(30);
