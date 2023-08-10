@@ -1080,3 +1080,17 @@ function average(salary) {
 }
 
 average([4000,3000,1000,2000]);
+
+//Occurrences After Bigram
+function findOcurrences(text, first, second) {
+    const arr = text.split(' ');
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === first && arr[i + 1] === second) {
+            result.push(arr[i + 2])
+        }
+    }
+    return result.filter(r => r !== undefined);
+}
+
+findOcurrences("ypkk lnlqhmaohv lnlqhmaohv lnlqhmaohv ypkk ypkk ypkk ypkk ypkk ypkk lnlqhmaohv lnlqhmaohv lnlqhmaohv lnlqhmaohv ypkk ypkk ypkk lnlqhmaohv lnlqhmaohv ypkk", 'lnlqhmaohv', 'ypkk');
