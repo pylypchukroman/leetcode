@@ -1064,3 +1064,19 @@ function divideString(s, k, fill) {
 }
 
 divideString('abcdefgh', 3, 'x');
+
+//Average Salary Excluding the Minimum and Maximum Salary
+function average(salary) {
+    const result = [];
+    const max = Math.max(...salary);
+    const min = Math.min(...salary);
+    for (let i = 0; i < salary.length; i++) {
+        if (salary[i] === max || salary[i] === min) {
+            continue;
+        }
+        result.push(salary[i]);
+    }
+    return result.reduce((acc, num) => acc += num) / result.length;
+}
+
+average([4000,3000,1000,2000]);
