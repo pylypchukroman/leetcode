@@ -1094,3 +1094,10 @@ function findOcurrences(text, first, second) {
 }
 
 findOcurrences("ypkk lnlqhmaohv lnlqhmaohv lnlqhmaohv ypkk ypkk ypkk ypkk ypkk ypkk lnlqhmaohv lnlqhmaohv lnlqhmaohv lnlqhmaohv ypkk ypkk ypkk lnlqhmaohv lnlqhmaohv ypkk", 'lnlqhmaohv', 'ypkk');
+
+//Valid Anagram
+function average1(s, t) {
+    return s.toLowerCase().split('').sort().join('') === t.toLowerCase().split('').sort().join('');
+}
+
+average1('anagram', 'nagaram');
