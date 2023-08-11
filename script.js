@@ -1101,3 +1101,18 @@ function average1(s, t) {
 }
 
 average1('anagram', 'nagaram');
+
+//Circular Sentence
+function isCircularSentence(sentence) {
+    const arr = sentence.split(' ');
+    if (arr.length === 1) {
+        const target = arr[0];
+        return target[0] === target[target.length - 1];
+    } else {
+        for (let i = 1; i < arr.length; i++)
+        if (arr[i][0] !== arr[i - 1][arr[i - 1].length - 1]) return false;
+        return arr[0][0] === arr[arr.length - 1][arr[arr.length - 1].length - 1];
+    }
+}
+
+isCircularSentence('leetcode exercises sound delightful');
