@@ -1116,3 +1116,41 @@ function isCircularSentence(sentence) {
 }
 
 isCircularSentence('leetcode exercises sound delightful');
+
+//Reformat Date
+function reformatDate(date) {
+    const map = {
+        'Jan': '01',
+        'Feb': '02',
+        'Mar': '03',
+        'Apr': '04',
+        'May': '05',
+        'Jun': '06',
+        'Jul': '07',
+        'Aug': '08',
+        'Sep': '09',
+        'Oct': '10',
+        'Nov': '11',
+        'Dec': '12'
+    };
+    const arr = date.split(' ').reverse();
+    function extractDate(x) {
+        const numberPattern = /\d+/;
+        const match = x.match(numberPattern)[0];
+        if (match.length === 1) {
+            return '0' + match;
+        } else {
+            return match;
+        }
+    }
+    return arr.map((x, i) => {
+        if (i === 1) {
+            return map[x];
+        } else if (i === 2) {
+            return extractDate(x);
+        }
+        return x;
+    }).join('-');
+}
+
+reformatDate('26th May 1960');
