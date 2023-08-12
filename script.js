@@ -1166,3 +1166,21 @@ function threeConsecutiveOdds(arr) {
 }
 
 threeConsecutiveOdds([1,2,34,3,4,5,7,23,12]);
+
+//Maximum Ascending Subarray Sum
+function maxAscendingSum(nums) {
+    let currentSum = nums[0];
+    let maxSum = nums[0];
+    for(let i = 1; i < nums.length; i++) {
+        if(nums[i - 1] < nums[i]) {
+            currentSum += nums[i];
+            maxSum = Math.max(maxSum, currentSum)
+        } else {
+            currentSum = nums[i];
+        }
+    }
+
+    return maxSum;
+}
+
+maxAscendingSum([10,20,30,5,10,50]);
