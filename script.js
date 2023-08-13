@@ -1184,3 +1184,10 @@ function maxAscendingSum(nums) {
 }
 
 maxAscendingSum([10,20,30,5,10,50]);
+
+//K Items With the Maximum Sum
+function kItemsWithMaximumSum(numOnes, numZeros, numNegOnes, k) {
+    return Math.min(k, numOnes) - Math.max(0, k - numOnes - numZeros);
+}
+
+kItemsWithMaximumSum(2, 4, 4, 0);
