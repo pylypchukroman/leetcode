@@ -1191,3 +1191,18 @@ function kItemsWithMaximumSum(numOnes, numZeros, numNegOnes, k) {
 }
 
 kItemsWithMaximumSum(2, 4, 4, 0);
+
+//Sum of Digits of String After Convert
+function getLucky(s, k) {
+    let n = 0;
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    const number = s.split('').map(x => letters.indexOf(x) + 1).join('');
+    let temp = number;
+    while (n < k) {
+        temp = temp.split('').map(x => +x).reduce((acc, num) => acc += num).toString();
+        n++
+    }
+    return +temp;
+}
+
+getLucky('iiii', 1);
