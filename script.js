@@ -1206,3 +1206,18 @@ function getLucky(s, k) {
 }
 
 getLucky('iiii', 1);
+
+//Largest 3-Same-Digit Number in String
+function largestGoodInteger(num) {
+    let newArr = [];
+    const nums = nums.split('');
+    for(let i = 0; i < nums.length; i++) {
+        if(nums[i] === nums[i + 1] && nums[i] === nums[i + 2]) {
+            newArr.push(nums[i]);
+        }
+    }
+    newArr = newArr.map((item) => parseInt(item)).sort((a, b) => b - a);
+    return Array(3).fill(newArr[0]).join('');
+}
+
+largestGoodInteger('6777133339');
