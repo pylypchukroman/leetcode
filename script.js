@@ -1255,3 +1255,19 @@ function flat(arr) {
 }
 
 flat([4, [5], [[6]], [[[7]]]]);
+
+//Count Elements With Strictly Smaller and Greater Elements
+function countElements(nums) {
+    const temp = nums.sort((a, b) => a - b);
+    const min = temp[0];
+    const max = temp[temp.length - 1];
+    const result = [];
+    for (let i = 0; i < temp.length; i++) {
+        if (temp[i] !== max && temp[i] !== min) {
+            result.push(temp[i]);
+        }
+    }
+    return result.length;
+}
+
+countElements([11,7,2,15]);
