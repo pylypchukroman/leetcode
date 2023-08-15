@@ -1271,3 +1271,18 @@ function countElements(nums) {
 }
 
 countElements([11,7,2,15]);
+
+//Average Value of Even Numbers That Are Divisible by Three
+function averageValue(nums) {
+    let result = 0;
+    let count = 0
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 0 && nums[i] % 3 === 0) {
+            result += nums[i];
+            count++;
+        }
+    }
+    return result === 0 ? 0 : Math.floor(result / count);
+}
+
+averageValue([9,3,8,4,2,5,3,8,6,1]);
