@@ -1232,3 +1232,26 @@ function arrayRankTransform(arr) {
 }
 
 arrayRankTransform([40,10,20,30]);
+
+
+//Flatting
+// function flat(arr) {
+//     const string = JSON.stringify(arr);
+//     const regExp = /[0-9/]/g;
+//     const numbers = string.match(regExp);
+//     return numbers.map(number => +number);
+// }
+
+function flat(arr) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            result.push(...flat(arr[i]));
+        } else {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+
+flat([4, [5], [[6]], [[[7]]]]);
