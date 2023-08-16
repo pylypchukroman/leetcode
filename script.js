@@ -1286,3 +1286,13 @@ function averageValue(nums) {
 }
 
 averageValue([9,3,8,4,2,5,3,8,6,1]);
+
+//Element Appearing More Than 25% In Sorted Array
+function findSpecialInteger(arr) {
+    const temp = {};
+    arr.forEach(num => temp[num] = temp[num] ? temp[num] + 1 : 1);
+    const result = Object.keys(temp).filter(num => temp[num] > arr.length / 4);
+    return Number(result.join(''))
+}
+
+findSpecialInteger([1,2,3,3]);
