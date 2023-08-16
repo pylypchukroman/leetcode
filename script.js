@@ -1296,3 +1296,16 @@ function findSpecialInteger(arr) {
 }
 
 findSpecialInteger([1,2,3,3]);
+
+//Ransom Note
+function canConstruct(ransomNote, magazine) {
+    if (ransomNote.length > magazine.length) return false;
+    for (let i = 0; i < ransomNote.length; i++) {
+        let char = ransomNote[i];
+        if (!magazine.includes(char)) return false;
+        magazine = magazine.replace(char, '');
+    }
+    return true;
+}
+
+canConstruct('aa', 'ab');
