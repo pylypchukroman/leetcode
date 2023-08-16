@@ -1309,3 +1309,18 @@ function canConstruct(ransomNote, magazine) {
 }
 
 canConstruct('aa', 'ab');
+
+//Three Divisors
+function isThree(n) {
+    let x = 0;
+    let result = 0;
+    while (x <= n) {
+        if (n % x === 0) {
+            result +=1;
+        }
+        x++;
+    }
+    return result === 3;
+}
+
+isThree(2);
