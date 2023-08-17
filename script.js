@@ -1329,10 +1329,32 @@ isThree(2);
 function largestOddNumber (num) {
     for (let i = num.length-1; i >=0 ; i--) {
         if (num[i] % 2 !== 0) {
-            return num.slice(0, i+1);
+            return num.slice(0, i + 1);
         }
     }
     return "";
 }
 
-largestOddNumber('4206');
+largestOddNumber('4207');
+
+//Max Consecutive Ones
+function findMaxConsecutiveOnes (nums) {
+    const arr = nums.join('').split('0');
+    return Math.max(...arr.map(num => num.length));
+}
+
+// const findMaxConsecutiveOnes = function(nums) {
+//     let maxCount = 0;
+//     let count = 0;
+//     for (let i = 0; i<nums.length; i++){
+//         if (nums[i] === 1){
+//             count++;
+//             maxCount = Math.max(maxCount,count);
+//         } else {
+//             count = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+findMaxConsecutiveOnes([1,0,1,1,0,1]);
