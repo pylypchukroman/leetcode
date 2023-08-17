@@ -1358,3 +1358,17 @@ function findMaxConsecutiveOnes (nums) {
 // };
 
 findMaxConsecutiveOnes([1,0,1,1,0,1]);
+
+//Intersection of Two Arrays II
+function intersect (nums1, nums2) {
+    const result = [];
+    for (let i = 0; i < nums2.length; i++) {
+        if (nums1.includes(nums2[i])) {
+            result.push(nums2[i]);
+            nums1.splice(nums1.indexOf(nums2[i]), 1);
+        }
+    }
+    return result;
+}
+
+intersect([4,9,5], [9,4,9,8,4]);
