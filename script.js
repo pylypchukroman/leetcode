@@ -1372,3 +1372,18 @@ function intersect (nums1, nums2) {
 }
 
 intersect([4,9,5], [9,4,9,8,4]);
+
+//Rotate String
+function rotateString (s, goal) {
+    let result  = false;
+    for (let i = 0; i < s.length; i++) {
+        const firs = s[0];
+        s = s.slice(1) + firs;
+        if (s === goal) {
+            result = true;
+        }
+    }
+    return result;
+}
+
+rotateString('abcde', 'cdeab');
