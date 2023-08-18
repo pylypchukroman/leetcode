@@ -1394,3 +1394,15 @@ function sortedSquares (nums) {
 }
 
 sortedSquares([-7,-3,2,3,11]);
+
+//Remove Element
+function removeElement (nums, val) {
+    const arr = nums.filter(num => num !== val);
+    nums.length = 0;
+    nums.push(...arr);
+    return nums.length;
+}
+
+removeElement([3,2,2,3], 3);
+
+
