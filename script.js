@@ -1387,3 +1387,10 @@ function rotateString (s, goal) {
 }
 
 rotateString('abcde', 'cdeab');
+
+//Squares of a Sorted Array
+function sortedSquares (nums) {
+    return nums.map(num => Math.pow(num, 2)).sort((a, b) => a - b);
+}
+
+sortedSquares([-7,-3,2,3,11]);
