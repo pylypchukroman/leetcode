@@ -1444,4 +1444,15 @@ function numberOfSteps (num) {
 
 numberOfSteps(8);
 
+//Check If Two String Arrays are Equivalent
+function arrayStringsAreEqual (word1, word2) {
+    const firsWord = word1.reduce((acc, word) => acc += word);
+    const secondWord = word2.reduce((acc, word) => acc += word);
+    return firsWord === secondWord;
+
+    // word1.join('') === word2.join('');
+}
+
+arrayStringsAreEqual(["ab", "c"], ["a", "bc"]);
+
 
