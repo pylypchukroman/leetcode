@@ -1462,4 +1462,19 @@ function truncateSentence (s, k) {
 
 truncateSentence('Hello how are you Contestant', 4);
 
+//Faulty Keyboard
+function finalString (s) {
+    let result = '';
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'i') {
+            result = result.split('').reverse().join('');
+        } else {
+            result += s[i];
+        }
+    }
+    return result;
+}
+
+finalString('string');
+
 
