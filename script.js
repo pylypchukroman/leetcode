@@ -1455,4 +1455,11 @@ function arrayStringsAreEqual (word1, word2) {
 
 arrayStringsAreEqual(["ab", "c"], ["a", "bc"]);
 
+//Truncate Sentence
+function truncateSentence (s, k) {
+    return s.trim().split(' ').splice(0, k).join(' ');
+}
+
+truncateSentence('Hello how are you Contestant', 4);
+
 
