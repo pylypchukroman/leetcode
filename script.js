@@ -1419,4 +1419,13 @@ function checkIfExist (arr) {
 
 checkIfExist([-10,12,-20,-8,15]);
 
+//Subtract the Product and Sum of Digits of an Integer
+function subtractProductAndSum (n) {
+    const sum = n.toString().split('').map(num => +num).reduce((acc, num) => acc += num);
+    const prod = n.toString().split('').map(num => +num).reduce((acc, num) => acc *= num);
+    return prod - sum;
+}
+
+subtractProductAndSum(234);
+
 
