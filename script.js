@@ -1541,4 +1541,16 @@ function largestAltitude (gain) {
 
 largestAltitude([-5,1,5,0,-7]);
 
+//Minimum Number of Moves to Seat Everyone
+function minMovesToSeat (seats, students) {
+    let sum = 0;
+    seats.sort((a, b) => a - b);
+    students.sort((a, b) => a - b);
+    for (let i = 0; i < seats.length; i++) {
+        sum += Math.abs(seats[i] - students[i]);
+    }
 
+    return sum;
+}
+
+minMovesToSeat([4,1,5,9], [1,3,2,6]);
