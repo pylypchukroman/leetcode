@@ -1513,4 +1513,19 @@ function uniqueMorseRepresentations (words) {
 
 uniqueMorseRepresentations(["a"]);
 
+//Maximum Sum With Exactly K Elements
+function maximizeSum (nums, k) {
+    nums.sort((a, b) => b - a);
+    let x = 0;
+    let sum = 0;
+    while (x < k) {
+        sum += nums[0];
+        nums[0] = nums[0] + 1;
+        x++;
+    }
+    return sum;
+}
+
+maximizeSum([5,5,5], 2);
+
 
