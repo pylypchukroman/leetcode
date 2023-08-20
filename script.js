@@ -1528,4 +1528,17 @@ function maximizeSum (nums, k) {
 
 maximizeSum([5,5,5], 2);
 
+//Find the Highest Altitude
+function largestAltitude (gain) {
+    const result = [0];
+    let att = 0;
+    for (let i = 0; i < gain.length; i++) {
+        att += gain[i];
+        result.push(att);
+    }
+    return Math.max(...result);
+}
+
+largestAltitude([-5,1,5,0,-7]);
+
 
