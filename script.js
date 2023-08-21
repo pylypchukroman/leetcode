@@ -1584,3 +1584,10 @@ function sumBase (n, k) {
 
 sumBase(34, 6);
 
+//Number of Senior Citizens
+function countSeniors (details) {
+    const filtered = details.filter(detail => Number(detail.slice(11, 13)) > 60);
+    return filtered.length;
+}
+
+countSeniors(["7868190130M7522","5303914400F9211","9273338290F4010"]);
