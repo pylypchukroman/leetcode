@@ -1554,3 +1554,20 @@ function minMovesToSeat (seats, students) {
 }
 
 minMovesToSeat([4,1,5,9], [1,3,2,6]);
+
+//Find Greatest Common Divisor of Array
+function findGCD (nums) {
+    const max = Math.max(...nums);
+    const min = Math.min(...nums);
+    let x = 0;
+    const result = [];
+    while (x <= max) {
+        if (max % x === 0 && min % x === 0) {
+            result.push(x);
+        }
+        x++;
+    }
+    return Math.max(...result);
+}
+
+findGCD([3,3]);
