@@ -1571,3 +1571,16 @@ function findGCD (nums) {
 }
 
 findGCD([3,3]);
+
+//Sum of Digits in Base K
+function sumBase (n, k) {
+    let result = 0;
+    const expressed = n.toString(k);
+    for (let i = 0; i < expressed.length; i++) {
+        result += Number(expressed[i]);
+    }
+    return result;
+}
+
+sumBase(34, 6);
+
