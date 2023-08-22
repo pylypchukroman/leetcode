@@ -1639,3 +1639,23 @@ function busyStudent (startTime, endTime, queryTime) {
 }
 
 busyStudent([1,2,3], [3,2,7], 4);
+
+//Robot Return to Origin
+function judgeCircle (moves) {
+    const result = [];
+    const arr = moves.split('');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 'U') {
+            result.push(1)
+        } else if (arr[i] === 'D') {
+            result.push(-1);
+        } else if (arr[i] === 'L') {
+            result.push(20);
+        } else if (arr[i] === 'R') {
+            result.push(-20);
+        }
+    }
+    return result.reduce((acc, num) => acc += num) === 0;
+}
+
+judgeCircle('UD');
