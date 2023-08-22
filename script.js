@@ -1601,3 +1601,22 @@ function areOccurrencesEqual (s) {
 }
 
 areOccurrencesEqual('abacbc');
+
+//Find N Unique Integers Sum up to Zero
+function sumZero (n) {
+        if (n % 2 === 0) {
+            const result = [];
+            for (let i = 1; i <= n / 2; i++) {
+                result.push(i, -i);
+            }
+            return result;
+        } else {
+            const result = [0];
+            for (let i = 1; i <= Math.floor(n / 2); i++) {
+                result.push(i, -i);
+            }
+            return  result;
+        }
+}
+
+sumZero(6);
