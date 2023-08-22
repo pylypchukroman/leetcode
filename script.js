@@ -1620,3 +1620,14 @@ function sumZero (n) {
 }
 
 sumZero(6);
+
+//Counting Bits
+function countBits (n) {
+    const result = [];
+    for (let i = 0; i <= n; i++){
+        result.push(i.toString(2).split("0").join("").length);
+    }
+    return result;
+}
+
+countBits(2);
