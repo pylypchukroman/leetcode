@@ -1631,3 +1631,11 @@ function countBits (n) {
 }
 
 countBits(2);
+
+//Number of Students Doing Homework at a Given Time
+function busyStudent (startTime, endTime, queryTime) {
+    const filtered = startTime.filter((_, i) => startTime[i] <= queryTime && endTime[i] >= queryTime);
+    return filtered.length;
+}
+
+busyStudent([1,2,3], [3,2,7], 4);
