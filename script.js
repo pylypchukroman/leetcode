@@ -1659,3 +1659,13 @@ function judgeCircle (moves) {
 }
 
 judgeCircle('UD');
+
+// Count the Number of Vowel Strings in Range
+function vowelStrings (words, left, right) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const filtered = words.slice(left, right + 1).filter(word => vowels.includes(word[0]) && vowels.includes(word[word.length - 1]));
+    return filtered.length;
+}
+
+vowelStrings(["hey","aeo","mu","ooo","artro"], 1, 4);
+
