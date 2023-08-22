@@ -1591,3 +1591,13 @@ function countSeniors (details) {
 }
 
 countSeniors(["7868190130M7522","5303914400F9211","9273338290F4010"]);
+
+//Check if All Characters Have Equal Number of Occurrences
+function areOccurrencesEqual (s) {
+    const result = {};
+    s.split('').forEach(l => result[l] = result[l] ? result[l] + 1 : 1);
+    const uniq = [...new Set(Object.values(result))];
+    return uniq.length === 1;
+}
+
+areOccurrencesEqual('abacbc');
