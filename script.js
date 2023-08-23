@@ -1719,3 +1719,17 @@ function minDeletionSize (strs) {
 }
 
 minDeletionSize(["cba","daf","ghi"]);
+
+//Two Out of Three
+function twoOutOfThree (nums1, nums2, nums3) {
+    const result = {};
+    const uniq1 = [...new Set(nums1)];
+    const uniq2 = [...new Set(nums2)];
+    const uniq3 = [...new Set(nums3)];
+    const arr = uniq1.concat(uniq2).concat(uniq3);
+    arr.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+    const filtered = Object.keys(result).filter(num => result[num] >= 2).map(x => +x);
+    return filtered
+}
+
+twoOutOfThree([1,1,3,2], [2,3], [3]);
