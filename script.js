@@ -1703,3 +1703,10 @@ function countOperations (num1, num2) {
 }
 
 countOperations(2, 3);
+
+//Minimize String Length
+function minimizedStringLength (s) {
+    return [...new Set(s.split(''))].length;
+}
+
+minimizedStringLength('dddaaa');
