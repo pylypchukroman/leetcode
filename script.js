@@ -1710,3 +1710,12 @@ function minimizedStringLength (s) {
 }
 
 minimizedStringLength('dddaaa');
+
+//Delete Columns to Make Sorted
+function minDeletionSize (strs) {
+    const moved = strs[0].split('').map((col, i) => strs.map((row) => row[i]));
+    const sorted = moved.filter(x => x.join('') !== x.sort().join(''));
+    return sorted.length;
+}
+
+minDeletionSize(["cba","daf","ghi"]);
