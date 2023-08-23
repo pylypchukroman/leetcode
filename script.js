@@ -1687,3 +1687,19 @@ function calPoints (operations) {
 }
 
 calPoints(["5","2","C","D","+"]);
+
+//Count Operations to Obtain Zero
+function countOperations (num1, num2) {
+    let counter = 0;
+    while (num1 && num2 !== 0) {
+        if (num1 < num2) {
+            num2 = num2 - num1;
+        } else {
+            num1 = num1 - num2;
+        }
+        counter++;
+    }
+    return counter;
+}
+
+countOperations(2, 3);
