@@ -1669,3 +1669,21 @@ function vowelStrings (words, left, right) {
 
 vowelStrings(["hey","aeo","mu","ooo","artro"], 1, 4);
 
+//Baseball Game
+function calPoints (operations) {
+    const result = [];
+    for (let i = 0; i < operations.length; i++) {
+        if (operations[i] === 'D') {
+            result.push(result[result.length - 1] * 2);
+        } else if (operations[i] === 'C') {
+            result.pop();
+        } else if (operations[i] === '+') {
+            result.push(result[result.length - 1] + result[result.length - 2]);
+        } else {
+            result.push(Number(operations[i]));
+        }
+    }
+    return result.reduce((acc, num) => acc += num);
+}
+
+calPoints(["5","2","C","D","+"]);
