@@ -1750,3 +1750,13 @@ function countPrefixes (words, s) {
 }
 
 countPrefixes(["a","b","c","ab","bc","abc"], 'abc');
+
+//Maximum Number of Words You Can Type
+function canBeTypedWords (text, brokenLetters) {
+    const brokenArr = brokenLetters.split('');
+    const textArr = text.split(' ');
+    const result = textArr.filter(text => brokenArr.every(l => !text.includes(l))).length;
+    return result;
+}
+
+canBeTypedWords('leet code', 'lt');
