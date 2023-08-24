@@ -1733,3 +1733,13 @@ function twoOutOfThree (nums1, nums2, nums3) {
 }
 
 twoOutOfThree([1,1,3,2], [2,3], [3]);
+
+//Check if Word Equals Summation of Two Words
+function isSumEqual (firstWord, secondWord, targetWord) {
+    const first = Array.from(firstWord).reduce((a, c) => a += c.charCodeAt(0) - 97, '')
+    const second = Array.from(secondWord).reduce((a, c) => a += c.charCodeAt(0) - 97, '')
+    const target = Array.from(targetWord).reduce((a, c) => a += c.charCodeAt(0) - 97, '')
+    return (+first + +second) === +target
+}
+
+isSumEqual('j', 'j', 'bi');
