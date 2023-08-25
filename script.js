@@ -1783,3 +1783,14 @@ function countKDifference1 (n) {
 }
 
 countKDifference1(7);
+
+//N-Repeated Element in Size 2N Array
+function repeatedNTimes (nums) {
+    const n = nums.length / 2;
+    const obj = {};
+    nums.forEach(num => obj[num] = obj[num] ? obj[num] + 1 : 1);
+    const filtered = Object.keys(obj).filter(x => obj[x] === n);
+    return Number(filtered[0]);
+}
+
+repeatedNTimes([1,2,3,3]);
