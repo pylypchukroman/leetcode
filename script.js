@@ -1813,11 +1813,11 @@ makeFancyString('leeetcode');
 function getMinDistance (nums, target, start) {
     const array = [];
     for (let i = 0; i < nums.length; i++){
-        if(nums[i] === target){
+        if (nums[i] === target){
             array.push(Math.abs(i - start));
         }
     }
     return Math.min(...array);
 }
 
-console.log(getMinDistance([1,1,1,1,1,1,1,1,1,1], 1, 0));
+getMinDistance([1,1,1,1,1,1,1,1,1,1], 1, 0);
