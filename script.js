@@ -1821,3 +1821,29 @@ function getMinDistance (nums, target, start) {
 }
 
 getMinDistance([1,1,1,1,1,1,1,1,1,1], 1, 0);
+
+//Path Crossing
+function isPathCrossing (path) {
+    let visited = new Set();
+    let start = [0, 0];
+    visited.add(start.join(','));
+    for (let i = 0; i < path.length; i++) {
+        if (path[i] === 'N') {
+            start[1] += 1;
+        } else if (path[i] === 'E') {
+            start[0] += 1;
+        } else if (path[i] === 'S') {
+            start[1] -= 1;
+        } else if (path[i] === 'W') {
+            start[0] -= 1;
+        }
+        let current = start.join(',');
+        if (visited.has(current)) {
+            return true;
+        }
+        visited.add(current);
+    }
+    return false;
+}
+
+isPathCrossing('NNSWWEWSSESSWENNW');
