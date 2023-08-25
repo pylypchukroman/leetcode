@@ -1776,3 +1776,10 @@ function countKDifference (nums, k) {
 }
 
 countKDifference([1,2,2,1], 1);
+
+//Count of Matches in Tournament
+function countKDifference1 (n) {
+ return n - 1;
+}
+
+countKDifference1(7);
