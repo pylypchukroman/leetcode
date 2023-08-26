@@ -1872,7 +1872,7 @@ function hammingDistance (x, y) {
 
 hammingDistance(3, 1);
 
-//
+//Sort Integers by The Number of 1 Bits
 function sortByBits (arr) {
     if (arr.join('') === arr.sort((a, b) => b - a).join('')) {
         return arr.sort((a, b) => a.toString(2).split('0').join('').length - b.toString(2).split('0').join('').length).reverse();
@@ -1912,3 +1912,10 @@ function findDelayedArrivalTime (arrivalTime, delayedTime) {
 }
 
 findDelayedArrivalTime(15, 5);
+
+//Number of Strings That Appear as Substrings in Word
+function numOfStrings (patterns, word) {
+    return patterns.filter(x => word.includes(x)).length;
+}
+
+numOfStrings(["a","a","a"], 'ab');
