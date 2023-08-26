@@ -1883,3 +1883,19 @@ function sortByBits (arr) {
 }
 
 sortByBits([0,1,2,3,4,5,6,7,8]);
+
+//Replace All Digits with CharactersReplace All Digits with Characters
+function replaceDigits (s) {
+    const result = [];
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    for (let i = 0; i < s.length; i++) {
+        if (letters.includes(s[i])) {
+            result.push(s[i]);
+        } else {
+            result.push(letters[letters.indexOf(s[i - 1]) + Number(s[i])]);
+        }
+    }
+    return result.join('');
+}
+
+replaceDigits('a1c1e1');
