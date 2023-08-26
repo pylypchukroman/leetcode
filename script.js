@@ -1871,3 +1871,15 @@ function hammingDistance (x, y) {
 }
 
 hammingDistance(3, 1);
+
+//
+function sortByBits (arr) {
+    if (arr.join('') === arr.sort((a, b) => b - a).join('')) {
+        return arr.sort((a, b) => a.toString(2).split('0').join('').length - b.toString(2).split('0').join('').length).reverse();
+    } else {
+        arr.sort((a, b) => a - b);
+        return arr.sort((a, b) => a.toString(2).split('0').join('').length - b.toString(2).split('0').join('').length)
+    }
+}
+
+sortByBits([0,1,2,3,4,5,6,7,8]);
