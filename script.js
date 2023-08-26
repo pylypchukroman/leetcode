@@ -1856,3 +1856,18 @@ function reverseBits (n) {
 }
 
 reverseBits('00000010100101000001111010011100');
+
+//Hamming Distance
+function hammingDistance (x, y) {
+    const xBit = x.toString(2).padStart(32, '0');
+    const yBit = y.toString(2).padStart(32, '0');
+    let count = 0;
+    for (let i = 0; i < xBit.length; i++) {
+        if (xBit[i] !== yBit[i]) {
+            count++;
+        }
+    }
+    return count;
+}
+
+hammingDistance(3, 1);
