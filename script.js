@@ -1899,3 +1899,16 @@ function replaceDigits (s) {
 }
 
 replaceDigits('a1c1e1');
+
+//Calculate Delayed Arrival Time
+function findDelayedArrivalTime (arrivalTime, delayedTime) {
+    const delayed = arrivalTime + delayedTime;
+    if (delayed < 24) {
+        return delayed;
+    } else {
+        const day = Math.floor(delayed / 24);
+        return delayed - (day * 24);
+    }
+}
+
+findDelayedArrivalTime(15, 5);
