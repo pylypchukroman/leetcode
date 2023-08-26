@@ -1847,3 +1847,12 @@ function isPathCrossing (path) {
 }
 
 isPathCrossing('NNSWWEWSSESSWENNW');
+
+//Reverse Bits
+function reverseBits (n) {
+    const reversed = n.toString(2).split('').reverse().join('');
+    const result =  reversed.padEnd(32,'0');
+    return parseInt(result, 2);
+}
+
+reverseBits('00000010100101000001111010011100');
