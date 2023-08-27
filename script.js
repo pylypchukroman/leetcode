@@ -1919,3 +1919,20 @@ function numOfStrings (patterns, word) {
 }
 
 numOfStrings(["a","a","a"], 'ab');
+
+//Decrypt String from Alphabet to Integer Mapping
+function freqAlphabets (s) {
+    const letters = '@abcdefghijklmnopqrstuvwxyz';
+    let result = '';
+    for(let i = 0; i < s.length; i++) {
+        if (s[i + 2] === '#') {
+            result += letters[Number(s[i] + s[i + 1])];
+            i = i + 2;
+        } else {
+            result += letters[Number(s[i])];
+        }
+    }
+    return result;
+}
+
+freqAlphabets('10#11#12');
