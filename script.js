@@ -1936,3 +1936,11 @@ function freqAlphabets (s) {
 }
 
 freqAlphabets('10#11#12');
+
+//Find First Palindromic String in the Array
+function firstPalindrome (words) {
+    const result = words.find(word => word === word.split('').reverse().join(''));
+    return result === undefined ? '' : result;
+}
+
+firstPalindrome(["notapalindrome","racecar"]);
