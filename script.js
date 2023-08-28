@@ -1965,3 +1965,15 @@ function isSameAfterReversals (num) {
 }
 
 isSameAfterReversals(526);
+
+//Determine if String Halves Are Alike
+function halvesAreAlike (s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    const left = s.slice(0, s.length / 2);
+    const right = s.slice(s.length / 2);
+    const leftVowels = left.split('').filter(x => vowels.includes(x));
+    const rightVowels = right.split('').filter(x => vowels.includes(x));
+    return leftVowels.length === rightVowels.length;
+}
+
+halvesAreAlike('textbook');
