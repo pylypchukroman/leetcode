@@ -1989,3 +1989,10 @@ function findNonMinOrMax (nums) {
 }
 
 findNonMinOrMax([2,1,3]);
+
+//Count Negative Numbers in a Sorted Matrix
+function countNegatives (grid) {
+    return grid.map(x => x.filter(y => y < 0).length).reduce((acc, num) => acc += num);
+}
+
+countNegatives([[3,2],[1,0]]);
