@@ -1957,3 +1957,11 @@ function selfDividingNumbers (left, right) {
 }
 
 selfDividingNumbers(1, 22);
+
+//A Number After a Double Reversal
+function isSameAfterReversals (num) {
+    const doubleReversed = num.toString().split('').reverse().join('').replace(/^0+/, '').split('').reverse().join('').replace(/^0+/, '');
+    return num === +doubleReversed;
+}
+
+isSameAfterReversals(526);
