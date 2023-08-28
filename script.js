@@ -1944,3 +1944,16 @@ function firstPalindrome (words) {
 }
 
 firstPalindrome(["notapalindrome","racecar"]);
+
+//Self Dividing Numbers
+function selfDividingNumbers (left, right) {
+    const result = [];
+    for (let i = left; i <= right; i++) {
+        if (i.toString().split('').every(x => i % x === 0)) {
+            result.push(i);
+        }
+    }
+    return result;
+}
+
+selfDividingNumbers(1, 22);
