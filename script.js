@@ -1996,3 +1996,10 @@ function countNegatives (grid) {
 }
 
 countNegatives([[3,2],[1,0]]);
+
+//Counting Words With a Given Prefix
+function prefixCount (words, pref) {
+    return words.filter(word => word.startsWith(pref)).length;
+}
+
+prefixCount(["pay","attention","practice","attend"], 'at');
