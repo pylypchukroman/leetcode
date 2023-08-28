@@ -1977,3 +1977,15 @@ function halvesAreAlike (s) {
 }
 
 halvesAreAlike('textbook');
+
+//Neither Minimum nor Maximum
+function findNonMinOrMax (nums) {
+    if (nums.length <= 2) {
+        return -1;
+    } else {
+        nums.sort((a, b) => a - b);
+        return nums[1];
+    }
+}
+
+findNonMinOrMax([2,1,3]);
