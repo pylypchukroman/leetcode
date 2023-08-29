@@ -2018,3 +2018,19 @@ function heightChecker (heights) {
 }
 
 heightChecker([1,1,4,2,1,3]);
+
+//Row With Maximum Ones
+function rowAndMaximumOnes (mat) {
+    const result = [];
+    const ones = mat.map(x => x.join('').split('0').join('').length);
+    const max = Math.max(...ones);
+    for (let i = 0; i < ones.length; i++) {
+        if (ones[i] === max) {
+            result.push(i, max);
+            break;
+        }
+    }
+    return result;
+}
+
+rowAndMaximumOnes([[0,0,0],[0,1,1]]);
