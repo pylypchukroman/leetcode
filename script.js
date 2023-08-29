@@ -2003,3 +2003,18 @@ function prefixCount (words, pref) {
 }
 
 prefixCount(["pay","attention","practice","attend"], 'at');
+
+//Height Checker
+function heightChecker (heights) {
+    const arr = [...heights];
+    const sorted = heights.sort((a, b) => a - b);
+    let count = 0;
+    for (let i = 0; i < sorted.length; i++) {
+        if (sorted[i] !== arr[i]) {
+            count++;
+        }
+    }
+    return count;
+}
+
+heightChecker([1,1,4,2,1,3]);
