@@ -2034,3 +2034,17 @@ function rowAndMaximumOnes (mat) {
 }
 
 rowAndMaximumOnes([[0,0,0],[0,1,1]]);
+
+//Can Make Arithmetic Progression From Sequence
+function canMakeArithmeticProgression (arr) {
+    const sortedArr = arr.sort((a,b) => a - b);
+    const gap = sortedArr[1] - sortedArr[0];
+    for (let i = 1; i < sortedArr.length - 1; i++) {
+        if (sortedArr[i + 1] - sortedArr[i] !== gap) {
+            return false;
+        }
+    }
+    return true;
+}
+
+canMakeArithmeticProgression([3,5,1]);
