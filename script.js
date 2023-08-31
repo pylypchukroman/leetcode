@@ -2080,3 +2080,11 @@ function removeDuplicates (s) {
 }
 
 removeDuplicates('azxxzy');
+
+//The K Weakest Rows in a Matrix
+function kWeakestRows (mat, k) {
+    const mapped = mat.map((m, i) => [m.join('').split('0').join('').length, i]);
+    return mapped.sort((a, b) => a[0] - b[0]).map(x => x[1]).splice(0, k);
+}
+
+kWeakestRows([[1,1,0,0,0], [1,1,1,1,0], [1,0,0,0,0], [1,1,0,0,0], [1,1,1,1,1]], 3);
