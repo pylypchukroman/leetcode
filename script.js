@@ -2088,3 +2088,13 @@ function kWeakestRows (mat, k) {
 }
 
 kWeakestRows([[1,1,0,0,0], [1,1,1,1,0], [1,0,0,0,0], [1,1,0,0,0], [1,1,1,1,1]], 3);
+
+//Kth Distinct String in an Array
+function kthDistinct (arr, k) {
+    const result = {};
+    arr.forEach(x => result[x] = result[x] ? result[x] + 1 : 1);
+    const answer = Object.keys(result).filter(x => result[x] === 1);
+    return answer[k - 1] !== undefined ? answer[k -1] : '';
+}
+
+kthDistinct(["a","b","a"], 3);
