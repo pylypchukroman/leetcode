@@ -2067,3 +2067,16 @@ function minimumAbsDifference (arr) {
 }
 
 minimumAbsDifference([1,3,6,10,15]);
+
+//Remove All Adjacent Duplicates In String
+function removeDuplicates (s) {
+    for (let i = 1; i < s.length; i++) {
+        if (s[i] === s[i - 1]) {
+            s = s.slice(0, i - 1) + s.slice(i + 1);
+            i -= 2;
+        }
+    }
+    return s;
+}
+
+removeDuplicates('azxxzy');
