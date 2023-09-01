@@ -2117,3 +2117,15 @@ function divideArray (nums) {
 }
 
 divideArray([1,2,3,4]);
+
+//Substrings of Size Three with Distinct Characters
+function countGoodSubstrings (s) {
+    const result = [];
+    for (let i = 0; i < s.length - 2; i++) {
+        result.push(s.slice(i, i + 3));
+    }
+    const filtered = result.filter(x => new Set(x).size === 3);
+    return filtered.length;
+
+}
+countGoodSubstrings('aababcabc');
