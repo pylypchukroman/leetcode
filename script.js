@@ -2108,3 +2108,12 @@ function smallestEqual (nums) {
 }
 
 smallestEqual([1,2,3,4,5,6,7,8,9,0]);
+
+//Divide Array Into Equal Pairs
+function divideArray (nums) {
+    const result = {};
+    nums.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+    return Object.values(result).every(x => x % 2 === 0);
+}
+
+divideArray([1,2,3,4]);
