@@ -2126,6 +2126,19 @@ function countGoodSubstrings (s) {
     }
     const filtered = result.filter(x => new Set(x).size === 3);
     return filtered.length;
-
 }
 countGoodSubstrings('aababcabc');
+
+//Make Array Zero by Subtracting Equal Amounts
+function minimumOperations (nums) {
+    let count = 0;
+    let filtered = nums.filter(num => num !== 0);
+    while (filtered.length) {
+        let min = Math.min(...filtered);
+        let newArr = filtered.map(num => num - min);
+        filtered = newArr.filter(num => num !== 0);
+        count++;
+    }
+    return count;
+}
+minimumOperations([1,5,0,3,5]);
