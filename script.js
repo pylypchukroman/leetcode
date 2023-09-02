@@ -2150,3 +2150,16 @@ function maxProduct (nums) {
 }
 
 maxProduct([1,5,4,5]);
+
+//Merge Strings Alternately
+function mergeAlternately (word1, word2) {
+    const result = [];
+    let maxLength = Math.max(word1.length, word2.length);
+    for (let i = 0; i < maxLength; i++) {
+        if(word1[i]) result.push(word1[i]);
+        if(word2[i]) result.push(word2[i]);
+    }
+    return result.join('');
+}
+
+mergeAlternately('ab', 'pqrs');
