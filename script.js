@@ -2142,3 +2142,11 @@ function minimumOperations (nums) {
     return count;
 }
 minimumOperations([1,5,0,3,5]);
+
+//Maximum Product of Two Elements in an Array
+function maxProduct (nums) {
+    nums.sort((a, b) => b - a);
+    return (nums[0] - 1) * (nums[1] - 1);
+}
+
+maxProduct([1,5,4,5]);
