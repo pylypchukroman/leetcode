@@ -2200,3 +2200,10 @@ function isAcronym (words, s) {
 }
 
 isAcronym(["alice","bob","charlie"], 'abc');
+
+//Count the Number of Consistent Strings
+function countConsistentStrings (allowed, words) {
+    return words.filter(word => [...word].every(letter => allowed.includes(letter))).length;
+}
+
+countConsistentStrings('ab', ["ad","bd","aaab","baa","badab"]);
