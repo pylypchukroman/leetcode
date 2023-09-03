@@ -2189,3 +2189,14 @@ function decompressRLElist (nums) {
 }
 
 decompressRLElist([1,1,2,3]);
+
+//Check if a String Is an Acronym of Words
+function isAcronym (words, s) {
+    let result = '';
+    for (let i = 0; i < words.length; i++) {
+        result += words[i].at(0);
+    }
+    return result === s;
+}
+
+isAcronym(["alice","bob","charlie"], 'abc');
