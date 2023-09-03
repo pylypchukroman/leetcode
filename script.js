@@ -2178,3 +2178,14 @@ function numIdenticalPairs (nums) {
 }
 
 numIdenticalPairs([1,2,3,1,1,3]);
+
+//Decompress Run-Length Encoded List
+function decompressRLElist (nums) {
+    const chanced = [];
+    for (let i = 0; i < nums.length; i+= 2) {
+        chanced.push(nums.slice(i, i + 2));
+    }
+    return chanced.flatMap(x => new Array(x[0]).fill(x[1]));
+}
+
+decompressRLElist([1,1,2,3]);
