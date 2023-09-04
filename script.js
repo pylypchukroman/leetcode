@@ -2267,3 +2267,17 @@ function countPairs (nums, k) {
 }
 
 countPairs([3,1,2,2,2,1,3], 2);
+
+//Sum of Squares of Special Elements
+function sumOfSquares (nums) {
+    const arr = [];
+    const n = nums.length;
+    for (let i = 1; i <= nums.length; i++) {
+        if (n % i === 0) {
+            arr.push(nums[i - 1]);
+        }
+    }
+    return arr.reduce((acc, num) => acc += (num * num), 0);
+}
+
+sumOfSquares([2,7,1,19,18,3]);
