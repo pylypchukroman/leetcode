@@ -2237,3 +2237,16 @@ function countPoints (rings) {
 }
 
 countPoints('B0R0G0R9R0B0G0');
+
+//Find Maximum Number of String Pairs
+function maximumNumberOfStringPairs (words) {
+    let count = 0;
+    for (let i = 0; i < words.length; i++)
+        for (let j = i + 1; j < words.length; j++)
+            if (words[i] === words[j].split('').reverse().join('')) {
+                count ++;
+            }
+    return count;
+}
+
+maximumNumberOfStringPairs(["cd","ac","dc","ca","zz"]);
