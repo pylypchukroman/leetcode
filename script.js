@@ -2214,3 +2214,26 @@ function flipAndInvertImage (image) {
 }
 
 flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]);
+
+//Rings and Rods
+function countPoints (rings) {
+    const r = new Set();
+    const g = new Set();
+    const b = new Set();
+    let count = 0;
+    for (let i = 0; i < rings.length; i++) {
+        if (rings[i] === 'R') r.add(rings[i + 1]);
+        if (rings[i] === 'G') g.add(rings[i + 1]);
+        if (rings[i] === 'B') b.add(rings[i + 1]);
+    }
+    const arrR = [...r];
+    for (let i = 0; i < arrR.length; i++) {
+        if ([...g].includes(arrR[i]) && [...b].includes(arrR[i])) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+countPoints('B0R0G0R9R0B0G0');
