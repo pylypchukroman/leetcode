@@ -2207,3 +2207,10 @@ function countConsistentStrings (allowed, words) {
 }
 
 countConsistentStrings('ab', ["ad","bd","aaab","baa","badab"]);
+
+//Flipping an Image
+function flipAndInvertImage (image) {
+    return image.map(x => x.reverse().map(y => y === 0 ? 1 : 0));
+}
+
+flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]);
