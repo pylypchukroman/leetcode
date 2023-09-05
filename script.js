@@ -2291,3 +2291,26 @@ function destCity (paths) {
 }
 
 destCity([["B","C"],["D","B"],["C","A"]]);
+
+//Count Symmetric Integers
+function countSymmetricIntegers (low, high) {
+    let count = 0;
+    for (let i = low; i <= high; i++) {
+        let s = String(i);
+        if (s.length % 2 === 0 ) {
+            let sum1 = 0;
+            let sum2 = 0;
+            for (let j= 0; j < s.length / 2; j++) {
+                sum1 += +s[j];
+                sum2 += +s[s.length - j - 1];
+            }
+            if (sum1 === sum2) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+countSymmetricIntegers(1, 100);
+
