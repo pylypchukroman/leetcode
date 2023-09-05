@@ -2281,3 +2281,13 @@ function sumOfSquares (nums) {
 }
 
 sumOfSquares([2,7,1,19,18,3]);
+
+//Destination City
+function destCity (paths) {
+    const map = new Map(paths);
+    for (let val of map.values()) {
+        if (!map.has(val)) return val;
+    }
+}
+
+destCity([["B","C"],["D","B"],["C","A"]]);
