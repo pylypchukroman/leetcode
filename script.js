@@ -2326,3 +2326,12 @@ function replaceElements (arr) {
 
 replaceElements([400]);
 
+//Keep Multiplying Found Values by Two
+function findFinalValue (nums, original) {
+    while (nums.includes(original)) {
+        original = original * 2;
+    }
+    return original;
+}
+
+findFinalValue([5,3,6,1,12], 3);
