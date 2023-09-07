@@ -2335,3 +2335,22 @@ function findFinalValue (nums, original) {
 }
 
 findFinalValue([5,3,6,1,12], 3);
+
+//Number of Even and Odd Bits
+function evenOddBit (n) {
+    const bit = n.toString(2).split("").reverse();
+    let odd = 0;
+    let even = 0;
+    for (let i = 0; i < bit.length; i++) {
+        if (bit[i] === '1') {
+            if (i % 2 === 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+    }
+    return [even, odd];
+}
+
+evenOddBit(2);
