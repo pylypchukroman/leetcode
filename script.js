@@ -2354,3 +2354,12 @@ function evenOddBit (n) {
 }
 
 evenOddBit(2);
+
+//Sort Array by Increasing Frequency
+function frequencySort (nums) {
+    const obj = {};
+    nums.forEach(num => obj[num] = (obj[num] || 0) + 1);
+    return nums.sort((a, b) => obj[a] === obj[b] ? b - a : obj[a] - obj[b]);
+}
+
+frequencySort([2,3,1,3,2]);
