@@ -2380,3 +2380,18 @@ function splitNum (num) {
 }
 
 splitNum(4325);
+
+//Greatest English Letter in Upper and Lower Case
+function greatestLetter (s) {
+    const result = [];
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === s[i].toUpperCase()) {
+            if (s.includes(s[i].toLowerCase())) {
+                result.push(s[i]);
+            }
+        }
+    }
+    return result.length >= 1 ? result.sort((a, b) => b.localeCompare(a))[0] : '';
+}
+
+greatestLetter('nzmguNAEtJHkQaWDVSKxRCUivXpGLBcsjeobYPFwTZqrhlyOIfdM');
