@@ -2363,3 +2363,20 @@ function frequencySort (nums) {
 }
 
 frequencySort([2,3,1,3,2]);
+
+//Split With Minimum Sum
+function splitNum (num) {
+    const strNum = num.toString().split('').sort((a, b) => a - b);
+    let right = '';
+    let left = '';
+    for (let i = 0; i < strNum.length; i++) {
+        if (i % 2 === 0) {
+            left += strNum[i];
+        } else {
+            right += strNum[i];
+        }
+    }
+    return Number(right) + Number(left);
+}
+
+splitNum(4325);
