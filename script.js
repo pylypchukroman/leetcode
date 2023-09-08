@@ -2395,3 +2395,29 @@ function greatestLetter (s) {
 }
 
 greatestLetter('nzmguNAEtJHkQaWDVSKxRCUivXpGLBcsjeobYPFwTZqrhlyOIfdM');
+
+//Find the Array Concatenation Value
+function findTheArrayConcVal (nums) {
+    if (nums.length % 2 === 0) {
+        let result = 0;
+        while (nums.length) {
+            const added = nums[0].toString() + nums[nums.length - 1].toString();
+            result += Number(added);
+            nums.pop();
+            nums.shift();
+        }
+        return result;
+    } else {
+        const middle = nums[Math.floor(nums.length / 2)];
+        let result = middle;
+        while (nums.length !== 1) {
+            const added = nums[0].toString() + nums[nums.length - 1].toString();
+            result += Number(added);
+            nums.pop();
+            nums.shift();
+        }
+        return result;
+    }
+}
+
+findTheArrayConcVal([5,14,13,8,12]);
