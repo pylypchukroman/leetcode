@@ -2421,3 +2421,15 @@ function findTheArrayConcVal (nums) {
 }
 
 findTheArrayConcVal([5,14,13,8,12]);
+
+//Strictly Palindromic Number
+function isStrictlyPalindromic (n) {
+    const result = [];
+    const x = n > 36 ? 36 : n;
+    for (let i = 2; i <= x - 2; i++) {
+        result.push(x.toString(i));
+    }
+    return result.every(num => num === num.split('').reverse().join(''));
+}
+
+isStrictlyPalindromic(60);
