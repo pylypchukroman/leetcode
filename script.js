@@ -2440,3 +2440,23 @@ function sortTheStudents (score, k) {
 }
 
 sortTheStudents([[10,6,9,1],[7,5,11,2],[4,8,3,15]], 2);
+
+//Partition Array According to Given Pivot
+function pivotArray (nums, pivot) {
+    const under = [];
+    const piv = [];
+    const over = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] < pivot) {
+            under.push(nums[i]);
+        } else if (nums[i] === pivot) {
+            piv.push(nums[i]);
+        } else if (nums[i] > pivot) {
+            over.push(nums[i]);
+        }
+    }
+    return under.concat(piv).concat(over);
+}
+
+pivotArray([-3,4,3,2], 2);
+
