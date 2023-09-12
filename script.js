@@ -2460,3 +2460,18 @@ function pivotArray (nums, pivot) {
 
 pivotArray([-3,4,3,2], 2);
 
+//Queries on a Permutation With Key
+function processQueries (queries, m) {
+    const p = new Array(m).fill(0).map((_, idx) => idx + 1);
+    const result = [];
+    for(let q of queries) {
+        const idx = p.indexOf(q);
+        result.push(idx);
+        p.splice(idx, 1);
+        p.unshift(q);
+    }
+    return result;
+}
+
+processQueries([3,1,2,1], 5);
+
