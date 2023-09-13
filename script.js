@@ -2475,3 +2475,22 @@ function processQueries (queries, m) {
 
 processQueries([3,1,2,1], 5);
 
+//Rearrange Array Elements by Sign
+function rearrangeArray (nums) {
+    const pos = [];
+    const neg = [];
+    const result = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] >= 0) {
+            pos.push(nums[i]);
+        } else {
+            neg.push(nums[i]);
+        }
+    }
+    for (let i = 0; i < pos.length; i++) {
+        result.push(pos[i], neg[i]);
+    }
+    return result;
+}
+
+rearrangeArray([3,1,-2,-5,2,-4]);
