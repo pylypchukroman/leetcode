@@ -2494,3 +2494,20 @@ function rearrangeArray (nums) {
 }
 
 rearrangeArray([3,1,-2,-5,2,-4]);
+
+//
+function partitionString (s) {
+    let count = 1;
+    let set = new Set();
+    for (let i = 0; i < s.length; i++) {
+        if (!set.has(s[i])) {
+            set.add(s[i]);
+        } else {
+            count++;
+            set = new Set([s[i]]);
+        }
+    }
+    return count;
+}
+
+partitionString([3,1,-2,-5,2,-4]);
