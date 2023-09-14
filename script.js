@@ -2495,7 +2495,7 @@ function rearrangeArray (nums) {
 
 rearrangeArray([3,1,-2,-5,2,-4]);
 
-//
+//Optimal Partition of String
 function partitionString (s) {
     let count = 1;
     let set = new Set();
@@ -2511,3 +2511,11 @@ function partitionString (s) {
 }
 
 partitionString([3,1,-2,-5,2,-4]);
+
+//Count Number of Distinct Integers After Reverse Operations
+function countDistinctIntegers (nums) {
+    const reversed = nums.map(num => Number(num.toString().split('').reverse().join('')));
+    return new Set(nums.concat(reversed)).size;
+}
+
+countDistinctIntegers([1,13,10,12,31]);
