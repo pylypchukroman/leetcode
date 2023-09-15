@@ -2519,3 +2519,17 @@ function countDistinctIntegers (nums) {
 }
 
 countDistinctIntegers([1,13,10,12,31]);
+
+//Find Triangular Sum of an Array
+function triangularSum (nums) {
+    while (nums.length > 1) {
+        const result = [];
+        for (let i = 0; i < nums.length - 1; i++) {
+            result.push((nums[i] + nums[i+1]) % 10);
+        }
+        nums = result;
+    }
+    return nums[0];
+}
+
+triangularSum([1,2,3,4,5]);
