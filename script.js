@@ -2533,3 +2533,16 @@ function triangularSum (nums) {
 }
 
 triangularSum([1,2,3,4,5]);
+
+//Check If It Is a Straight Line
+function checkStraightLine (coordinates) {
+    const [x0, y0] = coordinates[0];
+    const [x1, y1] = coordinates[1];
+    for (let i = 2; i < coordinates.length; i++) {
+        const [x, y] = coordinates[i];
+        if ((x - x0) * (y1 - y0) !== (y - y0) * (x1 - x0)) return false;
+    }
+    return true;
+}
+
+checkStraightLine([[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]);
