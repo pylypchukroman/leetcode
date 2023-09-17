@@ -2546,3 +2546,17 @@ function checkStraightLine (coordinates) {
 }
 
 checkStraightLine([[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]);
+
+//Calculate Digit Sum of a String
+function digitSum (s, k) {
+    while (s.length > k) {
+        let result = "";
+        for (let i = 0; i < s.length; i += k)
+            result += s.substring(i, i + k).split("").reduce((acc, val) => acc + (+val), 0);
+
+        s = result;
+    }
+    return s;
+}
+
+digitSum('11111222223', 3);
