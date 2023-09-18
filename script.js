@@ -2560,3 +2560,32 @@ function digitSum (s, k) {
 }
 
 digitSum('11111222223', 3);
+
+//Sort Even and Odd Indices Independently
+function sortEvenOdd (nums) {
+    const result = [];
+    const even = [];
+    const odd = [];
+    for (let i = 0; i < nums.length; i++) {
+        i % 2 ? odd.push(nums[i]) : even.push(nums[i]);
+    }
+    odd.sort((a, b) => b - a);
+    even.sort((a, b) => a - b);
+    for (let i = 0; i < nums.length; i++) {
+        result.push(i % 2 ? odd.shift() : even.shift());
+    }
+    return result;
+}
+
+sortEvenOdd([4,1,2,3]);
+
+//N-th Tribonacci Number
+const cache = [0, 1, 1];
+function tribonacci (n) {
+    if (cache[n] === undefined) {
+        cache[n] = tribonacci(n - 3) + tribonacci(n - 2) + tribonacci(n - 1);
+    }
+    return cache[n];
+}
+
+tribonacci(4);
