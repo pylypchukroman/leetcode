@@ -2589,3 +2589,16 @@ function tribonacci (n) {
 }
 
 tribonacci(4);
+
+//fix div//
+function capitalize(str) {
+    let count = 0;
+    const outputString = str.replaceAll('<div>', (match) => {
+        count++;
+        return count % 2 === 0 ? '</div>' : match;
+    });
+    return outputString;
+}
+
+capitalize("<div><p><div>This is a <div> tag<div> </p>");
+
