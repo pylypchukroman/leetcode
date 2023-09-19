@@ -2606,7 +2606,7 @@ capitalize("<div><p><div>This is a <div> tag<div> </p>");
 function minMaxGame(nums) {
     while (nums.length > 1) {
         let arr = [];
-        for (let i = 0; i < nums.length / 2; i += 2) {
+        for (let i = 0; i < nums.length / 2; i ++) {
             if (i % 2 === 0) {
                 arr.push(Math.min(nums[2 * i], nums[2 * i + 1]));
             } else {
@@ -2619,4 +2619,13 @@ function minMaxGame(nums) {
 }
 
 minMaxGame([1,3,5,2,4,8,2,2]);
+
+//Complement of Base 10 Integer
+function bitwiseComplement(n) {
+    const binary = n.toString(2);
+    const reversedBinary = binary.split('').map(num => num === '0' ? '1' : '0').join('');
+    return parseInt(reversedBinary, 2);
+}
+
+bitwiseComplement(5);
 
