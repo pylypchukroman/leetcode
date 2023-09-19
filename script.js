@@ -2602,3 +2602,21 @@ function capitalize(str) {
 
 capitalize("<div><p><div>This is a <div> tag<div> </p>");
 
+//Min Max Game
+function minMaxGame(nums) {
+    while (nums.length > 1) {
+        let arr = [];
+        for (let i = 0; i < nums.length / 2; i += 2) {
+            if (i % 2 === 0) {
+                arr.push(Math.min(nums[2 * i], nums[2 * i + 1]));
+            } else {
+                arr.push(Math.max(nums[2 * i], nums[2 * i + 1]));
+            }
+        }
+        nums = [...arr];
+    }
+    return nums[0];
+}
+
+minMaxGame([1,3,5,2,4,8,2,2]);
+
