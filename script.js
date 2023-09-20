@@ -2629,3 +2629,11 @@ function bitwiseComplement(n) {
 
 bitwiseComplement(5);
 
+//Longer Contiguous Segments of Ones than Zeros
+function checkZeroOnes(s) {
+    const maxZeros = Math.max(...s.split('1').map(x => x.length));
+    const maxOnes = Math.max(...s.split('0').map(x => x.length));
+    return maxOnes > maxZeros;
+}
+
+checkZeroOnes('1101');
