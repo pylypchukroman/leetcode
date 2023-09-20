@@ -2637,3 +2637,22 @@ function checkZeroOnes(s) {
 }
 
 checkZeroOnes('1101');
+
+//Maximum Number of Balloons
+function maxNumberOfBalloons(text) {
+    let b = 0;
+    let a = 0;
+    let l = 0;
+    let o = 0;
+    let n = 0;
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] === 'b') b += 1;
+        if (text[i] === 'a') a += 1;
+        if (text[i] === 'l') l += 1;
+        if (text[i] === 'o') o += 1;
+        if (text[i] === 'n') n += 1;
+    }
+    return Math.floor(Math.min(b, a, l / 2, o / 2, n));
+}
+
+maxNumberOfBalloons('loonblxblllllllpoooon');
