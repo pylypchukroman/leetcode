@@ -2656,3 +2656,20 @@ function maxNumberOfBalloons(text) {
 }
 
 maxNumberOfBalloons('loonblxblllllllpoooon');
+
+//Consecutive Characters
+function maxPower(s) {
+    let result = 1;
+    let count = 1;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === s[i + 1]) {
+            count++;
+        } else {
+            result = Math.max(result, count);
+            count = 1;
+        }
+    }
+    return result;
+}
+
+maxPower('leetcode');
