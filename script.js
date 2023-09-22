@@ -2688,3 +2688,10 @@ function maxLengthBetweenEqualCharacters(s) {
 }
 
 maxLengthBetweenEqualCharacters('cabbac');
+
+//Kth Missing Positive Number
+function findKthPositive(arr, k) {
+    return [...new Array(10000).keys()].filter(v => !arr.includes(v))[k];
+}
+
+findKthPositive([2,3,4,7,11], 5);
