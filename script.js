@@ -2673,3 +2673,18 @@ function maxPower(s) {
 }
 
 maxPower('leetcode');
+
+//Largest Substring Between Two Equal Characters
+function maxLengthBetweenEqualCharacters(s) {
+    let count = [];
+    for (let i = 0; i < s.length; i++) {
+        for (let j = i + 1; j < s.length; j++) {
+            if (s[i] === s[j]) {
+                count.push(((j - 1) - (i + 1)) + 1)
+            }
+        }
+    }
+    return count.length > 0 ? Math.max(...count) : -1;
+}
+
+maxLengthBetweenEqualCharacters('cabbac');
