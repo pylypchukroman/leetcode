@@ -2695,3 +2695,17 @@ function findKthPositive(arr, k) {
 }
 
 findKthPositive([2,3,4,7,11], 5);
+
+//Find the K-Beauty of a Number
+function divisorSubstrings(num, k) {
+    const str = num.toString();
+    let result = 0;
+    for (let i = 0; i <= str.length - k; i++) {
+        if (num % Number(str.substring(i, i + k)) === 0) {
+            result++;
+        }
+    }
+    return result;
+}
+
+divisorSubstrings(430043, 2);
