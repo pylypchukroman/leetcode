@@ -2709,3 +2709,18 @@ function divisorSubstrings(num, k) {
 }
 
 divisorSubstrings(430043, 2);
+
+//Check If All 1's Are at Least Length K Places Away
+
+function kLengthApart(nums, k) {
+    let index = -1;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 1) {
+            if (index > -1 && i - index <= k) return false;
+            index = i;
+        }
+    }
+    return true;
+}
+
+kLengthApart([1,0,0,0,1,0,0,1,0], 2);
