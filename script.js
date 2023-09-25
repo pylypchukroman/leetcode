@@ -2724,3 +2724,21 @@ function kLengthApart(nums, k) {
 }
 
 kLengthApart([1,0,0,0,1,0,0,1,0], 2);
+
+//Minimum Recolors to Get K Consecutive Black Blocks
+function minimumRecolors(blocks, k) {
+    let result = k;
+    let whiteCount = 0;
+    for (let i = 0; i < blocks.length; i++) {
+        if (blocks[i] === "W") {
+            whiteCount++;
+        }
+        if (i >= k - 1) {
+            if (blocks[i - k] === "W") whiteCount--;
+            result = Math.min(result, whiteCount);
+        }
+    }
+    return result;
+}
+
+minimumRecolors('WBBWWBBWBW', 7);
