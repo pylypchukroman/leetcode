@@ -2742,3 +2742,10 @@ function minimumRecolors(blocks, k) {
 }
 
 minimumRecolors('WBBWWBBWBW', 7);
+
+//Find the Maximum Achievable Number
+function theMaximumAchievableX(num, t) {
+    return num + (t * 2);
+}
+
+theMaximumAchievableX(4, 1);
