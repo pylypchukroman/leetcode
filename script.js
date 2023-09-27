@@ -2751,7 +2751,7 @@ function theMaximumAchievableX(num, t) {
 theMaximumAchievableX(4, 1);
 
 //Count Pairs Whose Sum is Less than Target
-function countPairs(nums, target) {
+function countPairs2(nums, target) {
     let count = 0;
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
@@ -2763,4 +2763,17 @@ function countPairs(nums, target) {
     return count;
 }
 
-countPairs([-6,2,5,-2,-7,-1,3], -2);
+countPairs2([-6,2,5,-2,-7,-1,3], -2);
+
+//Sum of Values at Indices With K Set Bits
+function sumIndicesWithKSetBits(nums, k) {
+    return nums.reduce((acc, num, i) => {
+        if (i.toString(2).split('0').join('').length === k) {
+            acc += num;
+        }
+        return acc;
+    }, 0);
+}
+
+sumIndicesWithKSetBits([5,10,1,5,2], 1);
+
