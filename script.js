@@ -2798,3 +2798,20 @@ function createTargetArray(nums, index) {
 }
 
 createTargetArray([0,1,2,3,4], [0,1,2,2,1]);
+
+//Split a String in Balanced Strings
+function balancedStringSplit(s) {
+    let count = 0;
+    let result = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'R') {
+            count++;
+        } else {
+            count--;
+        }
+        if (count === 0) result++;
+    }
+    return result;
+}
+
+balancedStringSplit('RLRRLLRLRL');
