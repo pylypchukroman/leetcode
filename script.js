@@ -2777,3 +2777,14 @@ function sumIndicesWithKSetBits(nums, k) {
 
 sumIndicesWithKSetBits([5,10,1,5,2], 1);
 
+//Decode XORed Array
+function decode(encoded, first) {
+    const result = [first];
+    for (let i = 0; i < encoded.length; i++) {
+        result.push(encoded[i] ^ result[i])
+    }
+    return result;
+}
+
+decode([6,2,7,3], 4);
+
