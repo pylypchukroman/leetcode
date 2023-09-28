@@ -2815,3 +2815,36 @@ function balancedStringSplit(s) {
 }
 
 balancedStringSplit('RLRRLLRLRL');
+
+//Decode the Message
+function decodeMessage(key, message) {
+    const newKey = [...new Set(key)].filter(x => x !== ' ').join('')
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    const map = {};
+    let result = '';
+    for (let i = 0; i < newKey.length; i++) {
+        map[newKey[i]] = letters[i];
+    }
+    for (let i = 0; i < message.length; i++) {
+        if (message[i] !== ' ') {
+            result += map[message[i]];
+        } else {
+            result += ' ';
+        }
+    }
+    return result;
+}
+
+decodeMessage('the quick brown fox jumps over the lazy dog', 'vkbs bs t suepuv');
+
+//Find Center of Star Graph
+function findCenter(edges) {
+    const length = edges.length;
+    const coordinates = edges.flat(1);
+    const obj = {};
+    coordinates.forEach(num => obj[num] = obj[num] ? obj[num] + 1 : 1);
+    const result = Object.keys(obj).filter(x => obj[x] === length);
+    return Number(result[0]);
+}
+
+findCenter([[1,2],[2,3],[4,2]]);
