@@ -2788,3 +2788,13 @@ function decode(encoded, first) {
 
 decode([6,2,7,3], 4);
 
+//Create Target Array in the Given Order
+function createTargetArray(nums, index) {
+    const result = [];
+    for (let i = 0; i < index.length; i++) {
+        result.splice(index[i], 0, nums[i]);
+    }
+    return result;
+}
+
+createTargetArray([0,1,2,3,4], [0,1,2,2,1]);
