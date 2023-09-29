@@ -2848,3 +2848,20 @@ function findCenter(edges) {
 }
 
 findCenter([[1,2],[2,3],[4,2]]);
+
+//Number of Arithmetic Triplets
+function arithmeticTriplets(nums, diff) {
+    let result = 0;
+    for (let j = 1; j < nums.length - 1; j++) {
+        for (let i = 0; i < j; i++) {
+            for (let k = j + 1; k < nums.length; k++) {
+                if (nums[j] - nums[i] === diff && nums[k] - nums[j] === diff) {
+                    result++;
+                }
+            }
+        }
+    }
+    return result++;
+}
+
+arithmeticTriplets([0,1,4,6,7,10]);
