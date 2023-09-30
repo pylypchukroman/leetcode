@@ -2902,3 +2902,18 @@ function removeOuterParentheses(s) {
 }
 
 removeOuterParentheses('(()())(())');
+
+//Minimum Bit Flips to Convert Number
+function minBitFlips(start, goal) {
+    const bitStart = start.toString(2).padStart(100, '0');
+    const bitGoal = goal.toString(2).padStart(100, '0');
+    let count = 0;
+    for (let i = 0; i < bitStart.length; i++) {
+        if (bitStart[i] !== bitGoal[i]) {
+            count++;
+        }
+    }
+    return count;
+}
+
+minBitFlips(15, 19);
