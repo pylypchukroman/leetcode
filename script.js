@@ -2882,3 +2882,23 @@ function maxDepth(s) {
 }
 
 maxDepth('(1)+((2))+(((3)))');
+
+//Remove Outermost Parentheses
+function removeOuterParentheses(s) {
+    let count = 0;
+    let result = '';
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === ')') {
+            count--;
+        }
+        if (count >= 1) {
+            result += s[i];
+        }
+        if (s[i] === '(') {
+            count++;
+        }
+    }
+    return result;
+}
+
+removeOuterParentheses('(()())(())');
