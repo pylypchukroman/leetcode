@@ -2865,3 +2865,20 @@ function arithmeticTriplets(nums, diff) {
 }
 
 arithmeticTriplets([0,1,4,6,7,10]);
+
+//Maximum Nesting Depth of the Parentheses
+function maxDepth(s) {
+    let count = 0;
+    let result = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            count++;
+        } else if (s[i] === ')') {
+            count--;
+        }
+        result = Math.max(result, count);
+    }
+    return result;
+}
+
+maxDepth('(1)+((2))+(((3)))');
