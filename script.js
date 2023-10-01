@@ -2925,3 +2925,28 @@ function maxProductDifference(nums) {
 }
 
 maxProductDifference([4,2,5,9,7,4,8]);
+
+//Valid Parentheses
+function isValid(s) {
+    let result = [];
+    for (let i = 0; i < s.length; i++) {
+        switch (s[i]) {
+            case '(':
+                result.push(')');
+                break;
+            case '{':
+                result.push('}');
+                break;
+            case '[':
+                result.push(']');
+                break;
+            default:
+                if (result.pop() !== s[i]) {
+                    return false;
+                }
+        }
+    }
+    return result.length === 0;
+}
+
+isValid('()[]{}');
