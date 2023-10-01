@@ -2951,3 +2951,22 @@ function isValid(s) {
 }
 
 isValid('()[]{}');
+
+//Count Good Triplets
+function countGoodTriplets(arr, a, b, c) {
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (Math.abs(arr[i] - arr[j]) > a) continue;
+            for (let k = j + 1; k < arr.length; k++) {
+                if (Math.abs(arr[j] - arr[k]) > b) continue;
+                if (Math.abs(arr[k] - arr[i]) <= c) {
+                    result++;
+                }
+            }
+        }
+    }
+    return result;
+}
+
+countGoodTriplets([3,0,1,1,9,7], 7, 2, 3);
