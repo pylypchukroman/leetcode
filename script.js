@@ -2917,3 +2917,11 @@ function minBitFlips(start, goal) {
 }
 
 minBitFlips(15, 19);
+
+//Maximum Product Difference Between Two Pairs
+function maxProductDifference(nums) {
+    nums.sort((a, b) => a - b);
+    return (nums[nums.length - 1] * nums[nums.length - 2]) - (nums[0] * nums[1]);
+}
+
+maxProductDifference([4,2,5,9,7,4,8]);
