@@ -2970,3 +2970,18 @@ function countGoodTriplets(arr, a, b, c) {
 }
 
 countGoodTriplets([3,0,1,1,9,7], 7, 2, 3);
+
+//Lexicographically Smallest Palindrome
+function makeSmallestPalindrome(s) {
+    let result = s.split('');
+    for (let i = s.length - 1, j = 0; i >= Math.ceil(s.length / 2); i--, j++) {
+        if (result[i] < result[j]) {
+            result[j] = result[i];
+        } else {
+            result[i] = result[j];
+        }
+    }
+    return result.join('');
+}
+
+makeSmallestPalindrome('egcfe');
