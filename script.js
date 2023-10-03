@@ -2985,3 +2985,17 @@ function makeSmallestPalindrome(s) {
 }
 
 makeSmallestPalindrome('egcfe');
+
+//Minimum Operations to Make the Array Increasing
+function minOperations(nums) {
+    let count = 0;
+    for (let i = 0; i < nums.length - 1; i++) {
+        while (nums[i + 1] <= nums[i]) {
+            nums[i + 1] += 1;
+            count++;
+        }
+    }
+    return count;
+}
+
+minOperations([1,5,2,4,1]);
