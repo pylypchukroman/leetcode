@@ -2999,3 +2999,20 @@ function minOperations(nums) {
 }
 
 minOperations([1,5,2,4,1]);
+
+//Delete Greatest Value in Each Row
+function deleteGreatestValue(grid) {
+    grid.map(x => x.sort((a, b) => a - b));
+    let count = 0;
+    while (grid[0].length) {
+        const maxes = [];
+        for (let arr of grid) {
+            maxes.push(arr.pop())
+        }
+        count += Math.max(...maxes);
+    }
+    return count;
+}
+
+deleteGreatestValue([[1,2,4],[3,3,1]]);
+
