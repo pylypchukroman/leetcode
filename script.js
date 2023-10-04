@@ -3023,3 +3023,17 @@ function squareIsWhite(coordinates) {
 }
 
 squareIsWhite('a1');
+
+//Array Partition
+function arrayPairSum(nums) {
+    let count = 0;
+    nums.sort((a, b) => a - b);
+    for (let i = 0; i < nums.length; i++) {
+        if (i % 2 === 0) {
+            count += nums[i];
+        }
+    }
+    return count;
+}
+
+arrayPairSum([6,2,6,5,1,2]);
