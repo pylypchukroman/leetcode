@@ -3037,3 +3037,21 @@ function arrayPairSum(nums) {
 }
 
 arrayPairSum([6,2,6,5,1,2]);
+
+//Final Prices With a Special Discount in a Shop
+function finalPrices(prices) {
+    const result = [];
+    for (let i = 0 ;i < prices.length; i++){
+        for (let j = i + 1; j < prices.length; j++) {
+            if (prices[j] <= prices[i]) {
+                prices[i] = prices[i] - prices[j];
+                break;
+            }
+        }
+        result.push(prices[i]);
+
+    }
+    return result;
+}
+
+finalPrices([8,4,6,2,3]);
