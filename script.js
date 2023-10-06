@@ -3063,3 +3063,16 @@ function removePalindromeSub(s) {
 }
 
 removePalindromeSub('ababa');
+
+//Find the Distinct Difference Array
+function distinctDifferenceArray(nums) {
+    const result = [];
+    for (let i = 0; i < nums.length; i++) {
+        result.push( new Set(nums.slice(0, i + 1)).size - new Set(nums.slice(i + 1)).size);
+    }
+    return result;
+}
+
+distinctDifferenceArray([1,2,3,4,5]);
+
+
