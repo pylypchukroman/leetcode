@@ -3055,3 +3055,11 @@ function finalPrices(prices) {
 }
 
 finalPrices([8,4,6,2,3]);
+
+//Remove Palindromic Subsequences
+function removePalindromeSub(s) {
+    //bad version
+    return s === s.split('').reverse().join('') ? 1 : 2;
+}
+
+removePalindromeSub('ababa');
