@@ -3104,3 +3104,22 @@ function numberOfPoints(nums) {
 }
 
 numberOfPoints([[3,6],[1,5],[4,7]]);
+
+//Maximum Units on a Truck
+function maximumUnits(boxTypes, truckSize) {
+    boxTypes.sort((a, b) => b[1] - a[1]);
+    let count = 0;
+    let result = 0;
+    for (let box of boxTypes) {
+        count += box[0];
+        if (count <= truckSize) {
+            result += (box[0] * box[1]);
+        } else {
+            result += ((truckSize - (count - box[0])) * box[1]);
+            break;
+        }
+    }
+    return result;
+}
+
+maximumUnits([[1,3],[2,2],[3,1]], 4);
