@@ -3076,7 +3076,7 @@ function distinctDifferenceArray(nums) {
 distinctDifferenceArray([1,2,3,4,5]);
 
 //Maximum Number of Pairs in Array
-    function numberOfPairs(nums) {
+function numberOfPairs(nums) {
     let count = 0;
     for (let i = nums.length - 1; i >= 0; i--) {
         for (let j = i - 1; j >= 0; j--) {
@@ -3091,3 +3091,16 @@ distinctDifferenceArray([1,2,3,4,5]);
     }
 
 numberOfPairs([1,3,2,1,3,2,2]);
+
+//Points That Intersect With Cars
+function numberOfPoints(nums) {
+    const result = new Set();
+    for (let coordinates of nums) {
+        for (let i = coordinates[0]; i <= coordinates[1]; i++) {
+            result.add(i);
+        }
+    }
+    return result.size;
+}
+
+numberOfPoints([[3,6],[1,5],[4,7]]);
