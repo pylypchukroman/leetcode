@@ -3123,3 +3123,15 @@ function maximumUnits(boxTypes, truckSize) {
 }
 
 maximumUnits([[1,3],[2,2],[3,1]], 4);
+
+//Merge Two 2D Arrays by Summing Values
+function mergeArrays(nums1, nums2) {
+    const result = {};
+    nums1.forEach(arr => result[arr[0]] = result[arr[0]] ? result[arr[0]] + arr[1] : arr[1]);
+    nums2.forEach(arr => result[arr[0]] = result[arr[0]] ? result[arr[0]] + arr[1] : arr[1]);
+    return Object.entries(result).map(x => {
+        return [Number(x[0]), x[1]];
+    }).sort((a, b) => a[0] - b[0]);
+}
+
+mergeArrays([[1,2],[2,3],[4,5]], [[1,4],[3,2],[4,1]]);
