@@ -3135,3 +3135,20 @@ function mergeArrays(nums1, nums2) {
 }
 
 mergeArrays([[1,2],[2,3],[4,5]], [[1,4],[3,2],[4,1]]);
+
+//Maximum Number of Balls in a Box
+function countBalls(lowLimit, highLimit) {
+    const mappedArr = [];
+    const result = {};
+    for (let i = lowLimit; i <= highLimit; i++) {
+        mappedArr.push(getNumber(i));
+    }
+    mappedArr.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+    return Math.max(...Object.values(result));
+
+    function getNumber(num) {
+        return num.toString().split('').map(num => +num).reduce((acc, num) => acc += num);
+    }
+}
+
+countBalls(5, 15);
