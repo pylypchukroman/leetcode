@@ -3152,3 +3152,20 @@ function countBalls(lowLimit, highLimit) {
 }
 
 countBalls(5, 15);
+
+//Check if Number Has Equal Digit Count and Digit Value
+function digitCount(num) {
+    const obj = {};
+    const result = [];
+    num.split('').forEach(num => obj[num] = obj[num] ? obj[num] + 1 : 1);
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] === '0' && obj[i] === undefined) {
+            result.push(true);
+        } else {
+            result.push(Number(num[i]) === obj[i]);
+        }
+    }
+    return result.every(bool => bool === true);
+}
+
+digitCount('1210');
