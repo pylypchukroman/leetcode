@@ -3169,3 +3169,10 @@ function digitCount(num) {
 }
 
 digitCount('1210');
+
+//Make Two Arrays Equal by Reversing Subarrays
+function canBeEqual(target, arr) {
+    return target.sort((a, b) => a - b).toString() === arr.sort((a, b) => a - b).toString();
+}
+
+canBeEqual([1,2,3,4], [2,4,1,3]);
