@@ -3176,3 +3176,20 @@ function canBeEqual(target, arr) {
 }
 
 canBeEqual([1,2,3,4], [2,4,1,3]);
+
+//Check if All A's Appears Before All B's
+function checkString(s) {
+    const A = [];
+    const B = [];
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'a') {
+            A.push(i);
+        } else {
+            B.push(i);
+        }
+    }
+    if (A.length === 0) return true;
+    return Math.max(...A) < Math.min(...B);
+}
+
+checkString('bbb');
