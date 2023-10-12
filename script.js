@@ -3193,3 +3193,11 @@ function checkString(s) {
 }
 
 checkString('bbb');
+
+//Maximum Odd Binary Number
+function maximumOddBinaryNumber(s) {
+    s = [...s].sort((a, b) => b - a).join('');
+    return s.slice(1) + s.slice(0, 1);
+}
+
+maximumOddBinaryNumber('0101');
