@@ -3201,3 +3201,25 @@ function maximumOddBinaryNumber(s) {
 }
 
 maximumOddBinaryNumber('0101');
+
+//Longest Subsequence With Limited Sum
+function answerQueries(nums, queries) {
+    const result = [];
+    nums.sort((a, b) => a - b);
+    for (let i = 0; i < queries.length; i++) {
+        let count  = 0;
+        let sum = 0;
+        for (let j = 0; j < nums.length; j++) {
+            sum += nums[j];
+            if (sum <= queries[i]) {
+                count++;
+            } else {
+                break;
+            }
+        }
+        result.push(count);
+    }
+    return result;
+}
+
+answerQueries([2,3,4,5], [1]);
