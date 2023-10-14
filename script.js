@@ -3223,3 +3223,24 @@ function answerQueries(nums, queries) {
 }
 
 answerQueries([2,3,4,5], [1]);
+
+//Next Greater Element I
+function nextGreaterElement(nums1, nums2) {
+    const result = [];
+    for (let i = 0; i < nums1.length; i++) {
+        const index = nums2.indexOf(nums1[i]);
+        const targetArr = nums2.slice(index);
+        let target = -1;
+        for (let num of targetArr) {
+            if (num > nums1[i]) {
+                target = num;
+                break;
+            }
+        }
+        result.push(target);
+
+    }
+    return result;
+}
+
+nextGreaterElement([4,1,2], [1,3,4,2]);
