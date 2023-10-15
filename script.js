@@ -3244,3 +3244,17 @@ function nextGreaterElement(nums1, nums2) {
 }
 
 nextGreaterElement([4,1,2], [1,3,4,2]);
+
+//Sort Array By Parity II
+function sortArrayByParityII(nums) {
+    const odd = [];
+    const even = [];
+    const result = [];
+    nums.forEach(num => num % 2 === 0 ? odd.push(num) : even.push(num));
+    for (let i = 0; i < odd.length; i++) {
+       result.push(odd[i], even[i]);
+   }
+    return result;
+}
+
+sortArrayByParityII([4,2,5,7]);
