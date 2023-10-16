@@ -3266,3 +3266,33 @@ function fib(n) {
 }
 
 fib(2);
+
+//Lucky Numbers in a Matrix
+function luckyNumbers(matrix) {
+    const result = [];
+    const minNumbers = matrix.map(x => Math.min(...x));
+    const turnedMatrix = rotateMatrix45(matrix);
+    const maxNumbers = turnedMatrix.map(x => Math.max(...x));
+    for (let minNumber of minNumbers) {
+        if (maxNumbers.includes(minNumber)) {
+            result.push(minNumber);
+        }
+    }
+    return result;
+
+    function rotateMatrix45(matrix) {
+        const rows = matrix.length;
+        const cols = matrix[0].length;
+        const rotatedMatrix = new Array(cols).fill(null).map(() => new Array(rows).fill(null));
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                const newI = j;
+                const newJ = rows - 1 - i;
+                rotatedMatrix[newI][newJ] = matrix[i][j];
+            }
+        }
+        return rotatedMatrix;
+    }
+}
+
+luckyNumbers([[7,8],[1,2]]);
