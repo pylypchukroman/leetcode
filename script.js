@@ -3313,3 +3313,20 @@ function unequalTriplets(nums) {
 }
 
 unequalTriplets([1,1,1,1,1]);
+
+//Check Distances Between Same Letters
+function checkDistances(s, distance) {
+    let letters = "abcdefghijklmnopqrstuvwxyz";
+    for (let i = 0; i < s.length; i++) {
+        const firstIndex = s.indexOf(s[i]) + 1;
+        const lasIndex = s.lastIndexOf(s[i]) + 1;
+        const diff = [lasIndex - firstIndex] - 1;
+        let index = letters.indexOf(s[i]);
+        if (diff - distance[index] !== 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+checkDistances('abaccb', [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
