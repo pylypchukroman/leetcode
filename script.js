@@ -3346,3 +3346,19 @@ function countStudents(students, sandwiches) {
 }
 
 countStudents([1,1,0,0], [0,1,0,1]);
+
+//Count Pairs Of Similar Strings
+function similarPairs(words) {
+    let count = 0;
+    const mapped = words.map(word => [...new Set(word)].sort((a, b) => a.localeCompare(b)).join(''));
+    for (let i = 0; i < mapped.length - 1; i++) {
+        for (let j = i + 1; j < mapped.length; j++) {
+            if (mapped[i] === mapped[j]) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+similarPairs(["aabb","ab","ba"]);
