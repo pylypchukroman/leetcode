@@ -3330,3 +3330,19 @@ function checkDistances(s, distance) {
 }
 
 checkDistances('abaccb', [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+
+//Number of Students Unable to Eat Lunch
+function countStudents(students, sandwiches) {
+    let studentsString = students.join('');
+    const sandwichesString = sandwiches.join('');
+    for (let i = 0; i < sandwichesString.length; i++) {
+        if (studentsString.includes(sandwichesString[i])) {
+            studentsString = studentsString.replace(sandwichesString[i], '');
+        } else {
+            break;
+        }
+    }
+    return studentsString.length;
+}
+
+countStudents([1,1,0,0], [0,1,0,1]);
