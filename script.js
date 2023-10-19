@@ -3362,3 +3362,24 @@ function similarPairs(words) {
 }
 
 similarPairs(["aabb","ab","ba"]);
+
+//Prime Number of Set Bits in Binary Representation
+function countPrimeSetBits(left, right) {
+    const arr = [];
+    for (let i = left; i <= right; i++) {
+        arr.push(i.toString(2).split('0').join('').length);
+    }
+    const result = arr.filter(num => isPrime(num));
+    return result.length;
+
+    function isPrime(n) {
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return n > 1;
+    }
+}
+
+countPrimeSetBits(6, 10);
