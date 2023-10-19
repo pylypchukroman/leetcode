@@ -3383,3 +3383,22 @@ function countPrimeSetBits(left, right) {
 }
 
 countPrimeSetBits(6, 10);
+
+//Relative Sort Array
+function relativeSortArray(arr1, arr2) {
+    const obj = {};
+    const rest = [];
+    const result = [];
+    arr1.forEach(num => {
+        obj[num] = obj[num] ? obj[num] + 1 : 1;
+        if (!arr2.includes(num)) {
+            rest.push(num);
+        }
+    });
+    for (let i = 0; i < arr2.length; i++) {
+        result.push(...new Array(obj[arr2[i]]).fill(arr2[i]));
+    }
+    return result.concat(rest.sort((a, b) => a - b));
+}
+
+relativeSortArray([2,3,1,3,2,4,6,7,9,2,19], [2,1,4,3,9,6]);
