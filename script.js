@@ -3402,3 +3402,17 @@ function relativeSortArray(arr1, arr2) {
 }
 
 relativeSortArray([2,3,1,3,2,4,6,7,9,2,19], [2,1,4,3,9,6]);
+
+//Check if Numbers Are Ascending in a Sentence
+function areNumbersAscending(s) {
+    const numbers = [];
+    const arr = s.split(' ');
+    for (let x of arr) {
+        if (Number(x)) {
+            numbers.push(Number(x));
+        }
+    }
+    return numbers.every((num, i, arr) => !i || arr[i - 1] < num);
+}
+
+areNumbersAscending('hello world 5 x 5');
