@@ -3456,3 +3456,19 @@ function toGoatLatin(sentence) {
 }
 
 toGoatLatin('I speak Goat Latin');
+
+//Number Complement
+function findComplement(num) {
+    const bit = num.toString(2);
+    let result = '';
+    for (const b of bit) {
+        if (b === '0') {
+            result += '1';
+        } else {
+            result += '0';
+        }
+    }
+    return parseInt(result, 2);
+}
+
+findComplement(5);
