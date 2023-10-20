@@ -3432,3 +3432,27 @@ function alternateDigitSum(n) {
 }
 
 alternateDigitSum(111);
+
+//Goat Latin
+function toGoatLatin(sentence) {
+    const arr = sentence.split(' ');
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        const end = 'm' + 'a'.repeat(i + 2);
+        if (isVowel(arr[i])) {
+            result.push(arr[i] + end);
+        } else {
+            const converted = arr[i].slice(1) + arr[i].slice(0, 1);
+            result.push(converted + end);
+        }
+    }
+    return result.join(' ');
+
+    function isVowel(str) {
+        const vowel = 'aeiou';
+        const target = str.slice(0, 1).toLowerCase();
+        return vowel.includes(target);
+    }
+}
+
+toGoatLatin('I speak Goat Latin');
