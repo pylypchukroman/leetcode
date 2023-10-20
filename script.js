@@ -3416,3 +3416,19 @@ function areNumbersAscending(s) {
 }
 
 areNumbersAscending('hello world 5 x 5');
+
+//Alternating Digit Sum
+function alternateDigitSum(n) {
+    let result = 0;
+    const arr = n.toString().split('');
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            result += Number(arr[i]);
+        } else {
+            result += -Number(arr[i]);
+        }
+    }
+    return result;
+}
+
+alternateDigitSum(111);
