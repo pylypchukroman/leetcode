@@ -3472,3 +3472,22 @@ function findComplement(num) {
 }
 
 findComplement(5);
+
+//Backspace String Compare
+function backspaceCompare(s, t) {
+    return clearStr(s) === clearStr(t);
+    function clearStr(str) {
+        let result = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === "#") {
+                result = result.slice(0, -1);
+            } else {
+                result += str[i];
+            }
+        }
+        return result;
+    }
+}
+
+backspaceCompare('ab##', 'c#d#');
+
