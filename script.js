@@ -3491,3 +3491,17 @@ function backspaceCompare(s, t) {
 
 backspaceCompare('ab##', 'c#d#');
 
+//Shift 2D Grid
+function shiftGrid(grid, k) {
+    const arr = grid.flat();
+    for (let i = 1; i < k + 1; i++) {
+        arr.unshift(arr.pop());
+    }
+    const length = grid[0].length;
+    for (let i = 0; i < arr.length; i++) {
+        grid[parseInt(i / length)][parseInt(i % length)] = arr[i];
+    }
+    return grid;
+}
+
+shiftGrid([[1,2,3],[4,5,6],[7,8,9]], 1);
