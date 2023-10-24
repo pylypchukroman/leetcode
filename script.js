@@ -3522,3 +3522,22 @@ function countTriples(n) {
 }
 
 countTriples(10);
+
+//Find Nearest Point That Has the Same X or Y Coordinate
+function nearestValidPoint(x, y, points) {
+    let index = -1;
+    let minValue = Infinity;
+    for (let i = 0; i < points.length; i++) {
+        const [a, b] = points[i];
+        if (a === x || b === y) {
+            const distance = Math.abs(a - x) + Math.abs(b - y);
+            if (distance < minValue) {
+                index = i;
+                minValue = distance;
+            }
+        }
+    }
+    return index;
+}
+
+nearestValidPoint(3, 4, [[1,2],[3,1],[2,4],[2,3],[4,4]]);
