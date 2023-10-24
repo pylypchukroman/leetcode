@@ -3541,3 +3541,17 @@ function nearestValidPoint(x, y, points) {
 }
 
 nearestValidPoint(3, 4, [[1,2],[3,1],[2,4],[2,3],[4,4]]);
+
+//Find the Middle Index in Array
+function findMiddleIndex(nums) {
+    for (let i = 0; i < nums.length; i++) {
+        const leftNums = nums.slice(0, i).reduce((a, b) => a + b, 0);
+        const rightNums = nums.slice(i + 1).reduce((a, b) => a + b, 0);
+        if (leftNums === rightNums) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+findMiddleIndex([2,3,-1,8,4]);
