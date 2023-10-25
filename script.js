@@ -3555,3 +3555,23 @@ function findMiddleIndex(nums) {
 }
 
 findMiddleIndex([2,3,-1,8,4]);
+
+//Find Words That Can Be Formed by Characters
+function countCharacters(words, chars) {
+    let result = 0;
+    const filtered = words.filter(word => {
+        let target = chars;
+        let targetWord = ''
+        for (let i = 0; i < word.length; i++) {
+            if (target.includes(word[i])) {
+                targetWord += word[i];
+                target = target.replace(word[i], '');
+            }
+        }
+        return targetWord === word;
+    })
+    filtered.forEach(x => result += x.length);
+    return result;
+}
+
+countCharacters(["cat","bt","hat","tree"], 'atach');
