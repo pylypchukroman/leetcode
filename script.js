@@ -3594,3 +3594,21 @@ function numUniqueEmails(emails) {
 }
 
 numUniqueEmails(["a@leetcode.com","b@leetcode.com","c@leetcode.com"]);
+
+//Apply Operations to an Array
+function applyOperations(nums) {
+    let result = [...nums];
+    let zeros = 0;
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] === result[i + 1]) {
+            result[i] *= 2;
+            result[i + 1] = 0;
+        }
+        if (result[i] === 0) {
+            zeros++;
+        }
+    }
+    return result.filter(num => num !== 0).concat(new Array(zeros).fill(0));
+}
+
+applyOperations([0,1]);
