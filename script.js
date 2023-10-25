@@ -3575,3 +3575,22 @@ function countCharacters(words, chars) {
 }
 
 countCharacters(["cat","bt","hat","tree"], 'atach');
+
+//Unique Email Addresses
+function numUniqueEmails(emails) {
+    const mapped = emails.map(email => {
+        const [local, domain] = email.split('@');
+        let clearLocal = '';
+        for (let i = 0; i < local.length; i++) {
+            if (local[i] === '+') {
+                break;
+            } else {
+                clearLocal += local[i];
+            }
+        }
+        return clearLocal.replaceAll('.', '') + '@' + domain;
+    })
+    return new Set(mapped).size;
+}
+
+numUniqueEmails(["a@leetcode.com","b@leetcode.com","c@leetcode.com"]);
