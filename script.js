@@ -3612,3 +3612,22 @@ function applyOperations(nums) {
 }
 
 applyOperations([0,1]);
+
+//Number of Lines To Write String
+function numberOfLines(widths, s) {
+    let sum = 0;
+    let lines = 1;
+    for (let i = 0 ;i < s.length; i++) {
+        const target = widths[s[i].charCodeAt(0) - 97];
+        if (sum + target > 100) {
+            lines++;
+            sum = target;
+        } else {
+            sum += target;
+        }
+    }
+
+    return [lines,sum];
+}
+
+numberOfLines([10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], 'abcdefghijklmnopqrstuvwxyz');
