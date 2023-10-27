@@ -3652,3 +3652,20 @@ function distributeCandies(candyType) {
 }
 
 distributeCandies([1,1,2,2,3,3]);
+
+//Count Vowel Substrings of a String
+function countVowelSubstrings(word) {
+    const vowels = 'aeiou';
+    let count = 0;
+    for (let i = 0; i < word.length; i++) {
+        for (let j = i + 1; j < word.length; j++) {
+            const target = [...new Set(word.substring(i, j + 1))].join('');
+            if (target.split('').every(x => vowels.includes(x)) && target.length === 5) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+countVowelSubstrings('cuaieuouac');
