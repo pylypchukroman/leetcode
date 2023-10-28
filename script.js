@@ -3701,3 +3701,20 @@ function maxDistance(colors) {
 }
 
 maxDistance([1,1,1,6,1,1,1]);
+
+//Transpose Matrix
+function transpose(matrix) {
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+    const rotatedMatrix = new Array(cols).fill(null).map(() => new Array(rows).fill(null));
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            const newI = j;
+            const newJ = i;
+            rotatedMatrix[newI][newJ] = matrix[i][j];
+        }
+    }
+    return rotatedMatrix;
+}
+
+transpose([[1,2,3],[4,5,6],[7,8,9]]);
