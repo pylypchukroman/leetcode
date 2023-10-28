@@ -3669,3 +3669,18 @@ function countVowelSubstrings(word) {
 }
 
 countVowelSubstrings('cuaieuouac');
+
+//Count Largest Group
+function countLargestGroup(n) {
+    let count = 0;
+    let arr = [0];
+    for (let i = 1; i <= n; i++) {
+        let target = i.toString().split('').reduce((a, b) => +a + +b, 0);
+        arr[target] > 0 ? arr[target]++ : arr[target] = 1;
+    }
+    const max = Math.max(...arr);
+    arr.forEach(num => num === max && count++);
+    return count;
+}
+
+countLargestGroup(24);
