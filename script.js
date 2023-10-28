@@ -3684,3 +3684,20 @@ function countLargestGroup(n) {
 }
 
 countLargestGroup(24);
+
+//Two Furthest Houses With Different Colors
+function maxDistance(colors) {
+    let result = 0;
+    for (let i = 0; i < colors.length - 1; i++) {
+        for (let j = i + 1; j < colors.length; j++) {
+            let count = 0;
+            if (colors[i] !== colors[j]) {
+                count = Math.abs(i - j);
+            }
+            result = Math.max(result, count);
+        }
+    }
+    return result;
+}
+
+maxDistance([1,1,1,6,1,1,1]);
