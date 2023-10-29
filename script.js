@@ -3717,4 +3717,26 @@ function transpose(matrix) {
     return rotatedMatrix;
 }
 
-transpose([[1,2,3],[4,5,6],[7,8,9]]);
+transpose([[-15,1,3],[15,7,12],[5,6,-2]]);
+
+//Find the Width of Columns of a Grid
+function findColumnWidth(grid) {
+    const turnedMatrix = turnMatrix(grid);
+    return turnedMatrix.map(arr => Math.max(...arr.map(num => num.toString().length)));
+
+    function turnMatrix(matrix) {
+        const rows = matrix.length;
+        const cols = matrix[0].length;
+        const newMatrix = new Array(cols).fill(null).map(() => new Array(rows).fill(null));
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                const newI = j;
+                const newJ = i;
+                newMatrix[newI][newJ] = matrix[i][j];
+            }
+        }
+        return newMatrix;
+    }
+}
+
+findColumnWidth([[1],[22],[333]]);
