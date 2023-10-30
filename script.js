@@ -3745,7 +3745,6 @@ findColumnWidth([[1],[22],[333]]);
 function minStartValue(nums) {
     let lowest = 0;
     let sum = 0;
-
     for(let num of nums){
         sum += num;
         if(sum < lowest) {
@@ -3756,3 +3755,22 @@ function minStartValue(nums) {
 }
 
 minStartValue([-3,2,-3,4,2]);
+
+//Check if Matrix Is X-Matrix
+function checkXMatrix(grid) {
+    const n = grid.length;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            const el = grid[i][j];
+            if (i + j === n - 1 || i === j) {
+                if (el === 0) return false;
+            }
+            else {
+                if (el !== 0) return false;
+            }
+        }
+    }
+    return true;
+}
+
+checkXMatrix([[5,7,0],[0,3,1],[0,5,0]]);
