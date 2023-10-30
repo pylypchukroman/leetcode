@@ -3740,3 +3740,19 @@ function findColumnWidth(grid) {
 }
 
 findColumnWidth([[1],[22],[333]]);
+
+//Minimum Value to Get Positive Step by Step Sum
+function minStartValue(nums) {
+    let lowest = 0;
+    let sum = 0;
+
+    for(let num of nums){
+        sum += num;
+        if(sum < lowest) {
+            lowest = sum;
+        }
+    }
+    return Math.abs(lowest) + 1;
+}
+
+minStartValue([-3,2,-3,4,2]);
