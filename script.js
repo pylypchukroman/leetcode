@@ -3789,3 +3789,15 @@ function groupAnagrams(strs) {
 }
 
 groupAnagrams(["eat","tea","tan","ate","nat","bat"]);
+
+//Top K Frequent Elements
+function topKFrequent(nums, k) {
+    const map = new Map();
+    for (const num of nums) {
+        const value = map.get(num) + 1 || 1;
+        map.set(num, value);
+    }
+    return [...map.entries()].sort((a,b) => b[1] - a[1]).slice(0, k).flatMap(x => x[0]);
+}
+
+topKFrequent([3,0,1,0], 1);
