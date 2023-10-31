@@ -3774,3 +3774,18 @@ function checkXMatrix(grid) {
 }
 
 checkXMatrix([[5,7,0],[0,3,1],[0,5,0]]);
+
+//Group Anagrams
+function groupAnagrams(strs) {
+    const map = new Map();
+    if (!strs.length) return[];
+    for (const str of strs) {
+        const sorted = str.split('').sort().join('');
+        const values = map.get(sorted) || [];
+        values.push(str);
+        map.set(sorted, values);
+    }
+    return [...map.values()];
+}
+
+groupAnagrams(["eat","tea","tan","ate","nat","bat"]);
