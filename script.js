@@ -3801,3 +3801,23 @@ function topKFrequent(nums, k) {
 }
 
 topKFrequent([3,0,1,0], 1);
+
+//Longest Consecutive Sequence
+function longestConsecutive(nums) {
+    const numSet = new Set(nums);
+    let maxScore = 0;
+    for (const num of [ ...numSet ]) {
+        const prevNum = num - 1;
+        if (numSet.has(prevNum)) continue;
+        let [ currNum, score ] = [ num, 1 ];
+        const isStreak = () => numSet.has(currNum + 1)
+        while (isStreak()) {
+            currNum++;
+            score++;
+        }
+        maxScore = Math.max(maxScore, score);
+    }
+    return maxScore;
+}
+
+longestConsecutive([0,3,7,2,5,8,4,6,0,1]);
