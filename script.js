@@ -3778,7 +3778,7 @@ checkXMatrix([[5,7,0],[0,3,1],[0,5,0]]);
 //Group Anagrams
 function groupAnagrams(strs) {
     const map = new Map();
-    if (!strs.length) return[];
+    if (!strs.length) return [];
     for (const str of strs) {
         const sorted = str.split('').sort().join('');
         const values = map.get(sorted) || [];
@@ -3821,3 +3821,18 @@ function longestConsecutive(nums) {
 }
 
 longestConsecutive([0,3,7,2,5,8,4,6,0,1]);
+
+//Isomorphic Strings
+function isIsomorphic(s, t) {
+    let map = new Map();
+    for (let i = 0; i < s.length; i++) {
+        if (!map.has(s[i]))
+            map.set(s[i], t[i]);
+        else {
+            if (map.get(s[i]) !== t[i]) return false;
+        }
+    }
+    return new Set([...map.values()]).size === map.size;
+}
+
+isIsomorphic('paper', 'title');
