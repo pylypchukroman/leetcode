@@ -3849,3 +3849,16 @@ function rotate(nums, k) {
 }
 
 rotate([1,2,3,4,5,6,7], 3);
+
+//Find Words Containing Character
+function findWordsContaining(words, x) {
+    const result = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].includes(x)) {
+            result.push(i);
+        }
+    }
+    return result;
+}
+
+findWordsContaining(["leet","code"], 'e');
