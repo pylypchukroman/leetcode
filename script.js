@@ -3862,3 +3862,19 @@ function findWordsContaining(words, x) {
 }
 
 findWordsContaining(["leet","code"], 'e');
+
+//Divisible and Non-divisible Sums Difference
+function differenceOfSums(n, m) {
+    let divisible = [];
+    let notDivisible = [];
+    for (let i = 1; i <= n; i++) {
+        if (i % m === 0) {
+            divisible.push(i);
+        } else {
+            notDivisible.push(i);
+        }
+    }
+    return notDivisible.reduce((acc, num) => acc += num, 0) - divisible.reduce((acc, num) => acc += num, 0);
+}
+
+differenceOfSums(10, 3);
