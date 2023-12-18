@@ -3878,3 +3878,18 @@ function differenceOfSums(n, m) {
 }
 
 differenceOfSums(10, 3);
+
+//Sum of All Odd Length Subarrays
+function sumOddLengthSubarrays(arr) {
+    let result = 0;
+    for (let i = 1; i <= arr.length; i += 2) {
+        for (let j = 0; j <= arr.length - i; j++) {
+            for (let k = 0; k < i; k++) {
+                result += arr[j + k];
+            }
+        }
+    }
+    return result;
+}
+
+sumOddLengthSubarrays([1,4,2,5,3]);
