@@ -3904,3 +3904,10 @@ const twoSum = function(nums, target) {
     }
 };
 twoSum([3,2,4], 6);
+
+const isPalindrome = function(x) {
+    const reverse = Number(x.toString().split('').reverse().join(''));
+    return x === reverse;
+};
+
+isPalindrome(878);
