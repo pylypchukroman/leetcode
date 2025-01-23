@@ -3911,3 +3911,14 @@ const isPalindrome = function(x) {
 };
 
 isPalindrome(878);
+
+const longestCommonPrefix3 = function(strs) {
+};
+
+longestCommonPrefix3(["flower","flow","flight"]);
+
+const lengthOfLastWord = function(s) {
+    return s.split(' ').filter(word => word !== '').pop().length;
+};
+
+lengthOfLastWord('Hello World');
