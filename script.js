@@ -3938,3 +3938,12 @@ const singleNumber1 = function(nums) {
 };
 
 singleNumber1([4,1,2,1,2]);
+
+//Find the Difference
+const findTheDifference1 = function(s, t) {
+    let result = '';
+    [...t].forEach(x => s.includes(x) ? result = '' : result = x);
+    return result;
+};
+
+findTheDifference1("", "r");
