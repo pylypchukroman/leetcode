@@ -3941,9 +3941,15 @@ singleNumber1([4,1,2,1,2]);
 
 //Find the Difference
 const findTheDifference1 = function(s, t) {
-    let result = '';
-    [...t].forEach(x => s.includes(x) ? result = '' : result = x);
+    const sArr = s.split('').sort((a, b) => a.localeCompare(b));
+    const tArr = t.split('').sort((a, b) => a.localeCompare(b));
+    let result = ''
+    for (let i = 0; i < tArr.length; i++) {
+        if (tArr[i] !== sArr[i] || sArr[i] === undefined) {
+            result = tArr[i];
+        }
+    }
     return result;
 };
 
-findTheDifference1("", "r");
+findTheDifference1("abcd", "abcde");
