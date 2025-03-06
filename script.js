@@ -3953,3 +3953,18 @@ const findTheDifference1 = function(s, t) {
 };
 
 findTheDifference1("abcd", "abcde");
+
+//Find All Numbers Disappeared in an Array
+
+const findDisappearedNumbers3 = function(nums) {
+    const result = [];
+    const set = new Set(nums);
+    for (let i = 1; i < nums.length + 1; i++) {
+        if (!set.has(i)) {
+            result.push(i)
+        }
+    }
+    return result;
+};
+
+findDisappearedNumbers3([4,3,2,7,8,2,3,1]);
