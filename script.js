@@ -3968,3 +3968,10 @@ const findDisappearedNumbers3 = function(nums) {
 };
 
 findDisappearedNumbers3([4,3,2,7,8,2,3,1]);
+
+//Contains Duplicate
+const containsDuplicate2 = function(nums) {
+    return nums.length !== new Set(nums).size;
+};
+
+containsDuplicate2([1,2,3,1]);
