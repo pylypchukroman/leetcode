@@ -3975,3 +3975,17 @@ const containsDuplicate2 = function(nums) {
 };
 
 containsDuplicate2([1,2,3,1]);
+
+
+//Intersection of Two Arrays
+const intersection2 = function(nums1, nums2) {
+    const result = new Set;
+    for (let i = 0; i < nums1.length; i++) {
+        if (nums2.includes(nums1[i])) {
+            result.add(nums1[i]);
+        }
+    }
+    return result;
+};
+
+intersection2([4,9,5], [9,4,9,8,4]);
