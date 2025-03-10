@@ -3991,6 +3991,14 @@ const intersection2 = function(nums1, nums2) {
 intersection2([4,9,5], [9,4,9,8,4]);
 
 //Reverse String
-const reverseString = function(s) {
+const reverseString3 = function(s) {
     return s.reverse();
 };
+
+//Reverse Words in a String III
+
+const reverseWords3 = function(s) {
+    return s.split(' ').map(x => x.split('').reverse().join('')).join(' ');
+};
+
+reverseWords3("Let's take LeetCode contest");
