@@ -4002,3 +4002,12 @@ const reverseWords3 = function(s) {
 };
 
 reverseWords3("Let's take LeetCode contest");
+
+
+//Third Maximum Number
+const thirdMax2 = function(nums) {
+    const sorted = [...new Set(nums.sort((a, b) => b - a))];
+    return sorted[2] ? sorted[2] : sorted[0];
+};
+
+thirdMax2([3,3,4,3,4,3,0,3,3]);
