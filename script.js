@@ -4011,3 +4011,12 @@ const thirdMax2 = function(nums) {
 };
 
 thirdMax2([3,3,4,3,4,3,0,3,3]);
+
+
+//Move Zeroes
+const moveZeroes2 = function(nums) {
+    const filtered = nums.filter(num => num !== 0);
+    const l = nums.length - filtered.length;
+    return [...filtered, ...Array(l).fill(0)];
+};
+moveZeroes2([0,1,0,3,12]);
