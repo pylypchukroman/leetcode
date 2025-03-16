@@ -4015,3 +4015,10 @@ const moveZeroes2 = function(nums) {
     return [...filtered, ...Array(l).fill(0)];
 };
 moveZeroes2([0,1,0,3,12]);
+
+//Maximum Product of Three Numbers
+const maximumProduct2 = function(nums) {
+    return nums.sort((a, b) => b - a).slice(0, 3).reduce((acc, num) => acc *= num);
+};
+
+maximumProduct2([-100,-98,-1,2,3,4]);
