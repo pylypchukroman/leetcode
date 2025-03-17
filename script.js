@@ -4022,3 +4022,10 @@ const maximumProduct2 = function(nums) {
 };
 
 maximumProduct2([-100,-98,-1,2,3,4]);
+
+//To Lower Case
+const toLowerCase2 = function(s) {
+    return s.split('').map(x => x.toLowerCase()).join('');
+};
+
+toLowerCase2('HeLlo');
