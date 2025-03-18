@@ -4029,3 +4029,16 @@ const toLowerCase2 = function(s) {
 };
 
 toLowerCase2('HeLlo');
+
+//Rotate String
+const rotateString2 = function(s, goal) {
+    let result = '';
+    for (let i = 0; i < s.length; i++) {
+        const newS = s.slice(i + 1) + s.slice(0, i + 1)
+        if ( newS === goal) {
+            result = newS
+        }
+    }
+    return result !== '';
+};
+rotateString2('abcde', 'cdeab');
