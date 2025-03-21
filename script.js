@@ -4042,3 +4042,13 @@ const rotateString2 = function(s, goal) {
     return result !== '';
 };
 rotateString2('abcde', 'cdeab');
+
+//Add Digits
+const addDigits3 = function(num) {
+    let result = num;
+    while (result > 9) {
+        result = result.toString().split('').map(x => +x).reduce((acc, num) => acc += num);
+    }
+    return result;
+    };
+addDigits3(0);
