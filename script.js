@@ -4052,3 +4052,8 @@ const addDigits3 = function(num) {
     return result;
     };
 addDigits3(0);
+
+//To Upper Case
+ const toUpperCase = function(word) {
+     return word.toUpperCase();
+}
