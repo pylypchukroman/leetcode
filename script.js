@@ -4057,3 +4057,18 @@ addDigits3(0);
  const toUpperCase = function(word) {
      return word.toUpperCase();
 }
+
+//Remove All Adjacent Duplicates In String
+const removeDuplicates2 = function(s) {
+     const result = [];
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] !== result[result.length - 1]) {
+            result.push(s[i]);
+        } else {
+            result.pop();
+        }
+    }
+    return result.join('');
+};
+
+removeDuplicates2('abbaca')
