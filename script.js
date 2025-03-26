@@ -4071,4 +4071,11 @@ const removeDuplicates2 = function(s) {
     return result.join('');
 };
 
-removeDuplicates2('abbaca')
+removeDuplicates2('abbaca');
+
+//Maximum Product of Two Elements in an Array
+const maxProduct2 = function(nums) {
+    const sorted = nums.sort((a, b) => b - a);
+    return (sorted[0] - 1) * (sorted[1] - 1);
+};
+maxProduct2([3,4,5,2]);
