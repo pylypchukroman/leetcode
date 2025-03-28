@@ -4079,3 +4079,14 @@ const maxProduct2 = function(nums) {
     return (sorted[0] - 1) * (sorted[1] - 1);
 };
 maxProduct2([3,4,5,2]);
+
+//Shuffle String
+const restoreString2 = function(s, indices) {
+    const result = [];
+    for (const num of indices) {
+        result.push(s[num])
+    }
+    return result.join('');
+};
+
+restoreString2('codeleet', [4,5,6,7,0,2,1,3])
