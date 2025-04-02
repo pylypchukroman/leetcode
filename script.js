@@ -4122,3 +4122,7 @@ const fizzBuzz2 = function(n) {
     }
     return result;
 };
+
+const hammingWeight2 = function(n) {
+    return n.toString(2).split('0').join('').length;
+};
