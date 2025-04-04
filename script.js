@@ -4126,3 +4126,7 @@ const fizzBuzz2 = function(n) {
 const hammingWeight2 = function(n) {
     return n.toString(2).split('0').join('').length;
 };
+
+const isAnagram2 = function(s, t) {
+    return s.toLowerCase().split('').sort().join('') === t.toLowerCase().split('').sort().join('');
+};
