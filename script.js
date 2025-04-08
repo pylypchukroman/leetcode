@@ -4130,3 +4130,7 @@ const hammingWeight2 = function(n) {
 const isAnagram2 = function(s, t) {
     return s.toLowerCase().split('').sort().join('') === t.toLowerCase().split('').sort().join('');
 };
+
+const countSegments2 = function(s) {
+    return s.split(' ').filter(x => x !== '').length;
+};
