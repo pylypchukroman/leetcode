@@ -4134,3 +4134,28 @@ const isAnagram2 = function(s, t) {
 const countSegments2 = function(s) {
     return s.split(' ').filter(x => x !== '').length;
 };
+
+const romanToInt2 = function(s) {
+    let result = 0;
+    const map = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    };
+
+    for (let i = 0; i < s.length; i++) {
+        let first = s[i];
+        let second = s[i+1];
+
+        if (map[first] < map[second]) {
+            result -= map[first];
+        } else {
+            result += map[first];
+        }
+    }
+    return result;
+};
