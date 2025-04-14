@@ -4159,3 +4159,9 @@ const romanToInt2 = function(s) {
     }
     return result;
 };
+
+const singleNumber2 = function(nums) {
+    const counter = {};
+    nums.forEach(num => counter[num] = counter[num] ? counter[num] + 1 : 1);
+    return +Object.keys(counter).filter(num => counter[num] === 1).join('');
+};
