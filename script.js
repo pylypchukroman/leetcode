@@ -4165,3 +4165,9 @@ const singleNumber2 = function(nums) {
     nums.forEach(num => counter[num] = counter[num] ? counter[num] + 1 : 1);
     return +Object.keys(counter).filter(num => counter[num] === 1).join('');
 };
+
+const reverseBits2 = function(n) {
+    const reversed = n.toString(2).split('').reverse().join('');
+    const result =  reversed.padEnd(32,'0');
+    return parseInt(result, 2);
+};
