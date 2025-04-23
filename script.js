@@ -4171,3 +4171,14 @@ const reverseBits2 = function(n) {
     const result =  reversed.padEnd(32,'0');
     return parseInt(result, 2);
 };
+
+const mySqrt2 = function(x) {
+    if (x < 0) return -1;
+    let sr = x / 2;
+    let temp = 0;
+    while (sr !== temp) {
+        temp = sr;
+        sr = (x / sr + sr) / 2;
+    }
+    return Math.floor(sr);
+};
