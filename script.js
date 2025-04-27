@@ -4182,3 +4182,10 @@ const mySqrt2 = function(x) {
     }
     return Math.floor(sr);
 };
+
+const majorityElement2 = function(nums) {
+    const result = {};
+    const len = nums.length / 2;
+    nums.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+    return +Object.keys(result).filter(num => result[num] > len).join('');
+};
