@@ -4205,3 +4205,19 @@ const relativeSortArray2 = function(arr1, arr2) {
     }
     return result.concat(rest.sort((a, b) => a - b));
 };
+
+const relativeSortArray2 = function(arr1, arr2) {
+    const obj = {};
+    const rest = [];
+    const result = [];
+    arr1.forEach(num => {
+        obj[num] = obj[num] ? obj[num] + 1 : 1;
+        if (!arr2.includes(num)) {
+            rest.push(num);
+        }
+    });
+    for (let i = 0; i < arr2.length; i++) {
+        result.push(...new Array(obj[arr2[i]]).fill(arr2[i]));
+    }
+    return result.concat(rest.sort((a, b) => a - b));
+};
