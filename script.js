@@ -4221,3 +4221,10 @@ const relativeSortArray2 = function(arr1, arr2) {
     }
     return result.concat(rest.sort((a, b) => a - b));
 };
+
+const smallestEqual = function(nums) {
+    for (let i = 0; i < nums.length; i++) {
+        if (i % 10 === nums[i]) return i;
+    }
+    return -1;
+};
