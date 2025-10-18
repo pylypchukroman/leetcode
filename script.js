@@ -4221,4 +4221,15 @@ const isPalindromeNew = function(s) {
     return cleanedString === cleanedString.split('').reverse().join('');
 };
 
-isPalindromeNew(' ');
+// isPalindromeNew(' ');
+
+//344. Reverse String
+
+const reverseStringNew = function(s) {
+    const result = [];
+    for(let i = s.length - 1; i >= 0; i--) {
+        result.push(s[i]);
+    }
+    return result;
+};
+reverseStringNew(["h","e","l","l","o"]);
