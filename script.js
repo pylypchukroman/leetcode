@@ -4232,4 +4232,19 @@ const reverseStringNew = function(s) {
     }
     return result;
 };
-reverseStringNew(["h","e","l","l","o"]);
+// reverseStringNew(["h","e","l","l","o"]);
+
+
+// 14. Longest Common Prefix
+const longestCommonPrefixNew = function(strs) {
+    strs.sort();
+    const target = strs[0];
+    for (let i = 0; i < target.length; i++) {
+        if (target[i] !== strs[strs.length - 1][i]){
+            return target.substr(0, i);
+        }
+    }
+    return target;
+};
+
+// longestCommonPrefixNew(["flower","flow","flight"]);
