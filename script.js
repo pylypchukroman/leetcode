@@ -4270,3 +4270,23 @@ const searchNew = function(nums, target) {
 };
 
 // console.log(searchNew([5], 5));
+
+///35. Search Insert Position
+const searchInsertNew = function(nums, target) {
+    let rightIndex = nums.length - 1;
+    let leftIndex = 0;
+    while (leftIndex <= rightIndex) {
+        let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+        if (nums[middleIndex] === target) {
+            return middleIndex;
+        }
+        if (target > nums[middleIndex]) {
+            leftIndex = middleIndex + 1;
+        } else {
+            rightIndex = middleIndex - 1;
+        }
+    }
+    return leftIndex;
+};
+
+// console.log(searchInsertNew([1,3,5,6], 7));
