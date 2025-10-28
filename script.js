@@ -4314,3 +4314,25 @@ const intersectionNew = function(nums1, nums2) {
     }
     return [...result];
 };
+
+///374. Guess Number Higher or Lower
+const guessNumber = function (n) {
+    // let left = 1;
+    // let right = n;
+    //
+    // while (left <= right) {
+    //     let middle = left + Math.floor((right - left) / 2)
+    //     let res = guess(middle);
+    //     if (res === 0) {
+    //         return middle;
+    //     }
+    //     else if (res > 0) {
+    //         left = middle + 1;
+    //     }
+    //     else {
+    //         right = middle - 1;
+    //     }
+    // }
+};
+
+// guessNumber();
