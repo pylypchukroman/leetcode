@@ -4336,3 +4336,22 @@ const guessNumber = function (n) {
 };
 
 // guessNumber();
+
+//345. Reverse Vowels of a String
+const reverseVowels = function(s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    const vow = s.split('').filter(x => vowels.includes(x)).join('');
+    const revVow = vow.split('').reverse().join('');
+    let result = '';
+    for (let i = 0; i < s.length; i++) {
+        if (vowels.includes(s[i])) {
+            const index = vow.indexOf(s[i]);
+            result += revVow[index];
+        } else {
+            result += s[i];
+        }
+    }
+    return result;
+};
+
+// reverseVowels('leetcode');
