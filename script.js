@@ -4355,3 +4355,17 @@ const reverseVowels = function(s) {
 };
 
 // reverseVowels('leetcode');
+
+//1385. Find the Distance Value Between Two Arrays
+const findTheDistanceValueNew = function(arr1, arr2, d) {
+    let result = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        let temp = 0;
+        for (let j = 0; j < arr2.length; j++) {
+            if (Math.abs(arr1[i] - arr2[j]) <= d) temp++;
+        }
+        if (temp === 0) result++;
+    }
+    return result;
+};
+findTheDistanceValueNew([4,5,8], [10,9,1,8], 2)
