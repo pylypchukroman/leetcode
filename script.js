@@ -4357,15 +4357,31 @@ const reverseVowels = function(s) {
 // reverseVowels('leetcode');
 
 //1385. Find the Distance Value Between Two Arrays
-const findTheDistanceValueNew = function(arr1, arr2, d) {
-    let result = 0;
-    for (let i = 0; i < arr1.length; i++) {
-        let temp = 0;
-        for (let j = 0; j < arr2.length; j++) {
-            if (Math.abs(arr1[i] - arr2[j]) <= d) temp++;
+// const findTheDistanceValueNew = function(arr1, arr2, d) {
+//     let result = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//         let temp = [];
+//         for (let j = 0; j < arr2.length; j++) {
+//             temp.push([arr1[i], arr2[j]])
+//         }
+//         result.push(temp)
+//     }
+//     console.log(result)
+// };
+// findTheDistanceValueNew([4,5,8], [10,9,1,8], 2)
+
+//832. Flipping an Image
+const flipAndInvertImageNew = function(image) {
+    const result = [];
+    for (let i = 0; i < image.length; i++) {
+        image[i] = image[i].reverse();
+        let temp = [];
+        for (let j = 0; j < image[i].length; j++) {
+           temp.push(1 - image[i][j])
         }
-        if (temp === 0) result++;
+        result.push(temp);
     }
     return result;
 };
-findTheDistanceValueNew([4,5,8], [10,9,1,8], 2)
+
+// flipAndInvertImageNew([[1,1,0],[1,0,1],[0,0,0]]);
