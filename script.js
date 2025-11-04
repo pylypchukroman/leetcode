@@ -4385,3 +4385,22 @@ const flipAndInvertImageNew = function(image) {
 };
 
 // flipAndInvertImageNew([[1,1,0],[1,0,1],[0,0,0]]);
+
+//844. Backspace String Compare
+const backspaceCompareNew = function(s, t) {
+    return extract(s) === extract(t);
+
+    function extract(string) {
+        const temp = []
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] === '#') {
+                temp.pop();
+            } else {
+                temp.push(string[i]);
+            }
+        }
+        return temp.join('');
+    }
+};
+
+// console.log(backspaceCompareNew('ab##', 'c#d#'));
