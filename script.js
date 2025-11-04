@@ -4404,3 +4404,23 @@ const backspaceCompareNew = function(s, t) {
 };
 
 // console.log(backspaceCompareNew('ab##', 'c#d#'));
+//942. DI String Match
+
+const diStringMatch = function(s) {
+    const n = s.length;
+    let perm = [];
+    let low = 0, high = n;
+
+    for (let i = 0; i < n; i++) {
+        if (s[i] === 'I') {
+            perm.push(low);
+            low++;
+        } else {
+            perm.push(high);
+            high--;
+        }
+    }
+    perm.push(low);
+
+    return perm;
+};
