@@ -4439,3 +4439,14 @@ const duplicateZerosNew = function(arr) {
     return result.slice(0, arr.length);
 };
 // duplicateZerosNew([1,0,2,3,0,4,5,0]);
+//1961. Check If String Is a Prefix of Array
+
+const isPrefixString = function(s, words) {
+    let result = '';
+    for (let i = 0; i < words.length; i++) {
+        result += words[i];
+        if (result === s) return true;
+    }
+    return false;
+};
+// isPrefixString('iloveleetcode', ["i","love","leetcode","apples"])
