@@ -4450,3 +4450,17 @@ const isPrefixString = function(s, words) {
     return false;
 };
 // isPrefixString('iloveleetcode', ["i","love","leetcode","apples"])
+///2441. Largest Positive Integer That Exists With Its Negative
+
+const findMaxKNew = function(nums) {
+    const result = [];
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length;j++) {
+            if (nums[i] + nums[j] === 0) {
+                result.push(nums[i]);
+            }
+        }
+    }
+    return result.length >= 1 ? Math.max(...result.map(x => Math.abs(x))) : -1;
+}
+findMaxKNew([-37,37,-9,2,47,18,13,-11,9,-28])
