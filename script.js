@@ -4463,4 +4463,11 @@ const findMaxKNew = function(nums) {
     }
     return result.length >= 1 ? Math.max(...result.map(x => Math.abs(x))) : -1;
 }
-findMaxKNew([-37,37,-9,2,47,18,13,-11,9,-28])
+// findMaxKNew([-37,37,-9,2,47,18,13,-11,9,-28])
+//2540. Minimum Common Value
+const getCommonNew = function(nums1, nums2) {
+    const set = new Set(nums1);
+    const result = nums2.filter(num => set.has(num))[0];
+    return result !== undefined ? result : -1;
+};
+// getCommonNew([1,2,3], [2,4]);
