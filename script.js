@@ -4471,3 +4471,17 @@ const getCommonNew = function(nums1, nums2) {
     return result !== undefined ? result : -1;
 };
 // getCommonNew([1,2,3], [2,4]);
+//2903. Find Indices With Index and Value Difference I
+
+const findIndices = function(nums, indexDifference, valueDifference) {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums.length; j++) {
+            if (Math.abs(i - j) >= indexDifference && Math.abs(nums[i] - nums[j]) >= valueDifference) {
+                return [i, j];
+            }
+        }
+    }
+    return [-1, -1];
+
+};
+findIndices([5,1,4,1],2,4)
