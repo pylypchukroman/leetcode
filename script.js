@@ -4484,4 +4484,18 @@ const findIndices = function(nums, indexDifference, valueDifference) {
     return [-1, -1];
 
 };
-findIndices([5,1,4,1],2,4)
+// findIndices([5,1,4,1],2,4)
+//392. Is Subsequence
+const isSubsequence = function(s, t) {
+    let i = 0;
+    let j = 0;
+    while (i < s.length && j < t.length) {
+        if (s[i] === t[j]) {
+            i++
+        }
+        j++
+    }
+    return i === s.length;
+
+};
+// console.log(isSubsequence('abc', 'ahbgdc'))
