@@ -4551,3 +4551,13 @@ const canPlaceFlowersII = function(flowerbed, n) {
     }
     return count >= n;
 };
+ const arr = [1, 1, 1, 2, 3, 1];
+ function check(arr) {
+     const map = {};
+     arr.forEach(x => map[x] = map[x] ? map[x] + 1 : 1);
+
+     console.log(Object.values(map).some(x => x >= 2));
+     console.log(arr.length !== new Set(arr).size);
+ }
+
+check(arr)
