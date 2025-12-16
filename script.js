@@ -4556,8 +4556,20 @@ const canPlaceFlowersII = function(flowerbed, n) {
      const map = {};
      arr.forEach(x => map[x] = map[x] ? map[x] + 1 : 1);
 
-     console.log(Object.values(map).some(x => x >= 2));
-     console.log(arr.length !== new Set(arr).size);
+     // console.log(Object.values(map).some(x => x >= 2));
+     // console.log(arr.length !== new Set(arr).size);
  }
 
 check(arr)
+
+//136. Single Number
+const singleNumberII = function(nums) {
+    const hash = {};
+    nums.forEach(num => hash[num] = hash[num] ? hash[num] + 1 : 1);
+    const target = Object.entries(hash).filter(x => x[1] === 1);
+    return  Number(flat(target)[0]);
+
+};
+singleNumberII([4,1,2,1,2]
+
+);
