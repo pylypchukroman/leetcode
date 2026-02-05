@@ -28,3 +28,18 @@
 //
 // console.log(containsNearbyDuplicate([1,2,3,1],3))/
 //////////////////////////////
+
+//409. Longest Palindrome
+
+// const longestPalindrome = function(s) {
+//     let result = 0;
+//     let hash = {};
+//
+//     for (let char of s) {
+//         hash[char] = (hash[char] || 0) + 1;
+//         if (hash[char] % 2 === 0) result += 2;
+//     }
+//     return s.length > result ? result + 1 : result;
+// };
+//
+// longestPalindrome("ccc");
