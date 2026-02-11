@@ -43,3 +43,14 @@
 // };
 //
 // longestPalindrome("ccc");
+
+//819. Most Common Word
+// const mostCommonWord = function(paragraph, banned) {
+//     const arr = paragraph.toLowerCase().split(/\W+/g).filter(x => !banned.includes(x));
+//     const hash = {};
+//     arr.forEach(word => hash[word] = (hash[word] || 0) + 1 );
+//     const maxCount = Math.max(...Object.values(hash));
+//     const word = (Object.keys(hash).filter(word => hash[word] === maxCount));
+//     return word;
+// };
+// mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", ["hit"])
