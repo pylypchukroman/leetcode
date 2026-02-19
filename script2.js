@@ -54,3 +54,25 @@
 //     return word;
 // };
 // mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", ["hit"])
+
+
+///////////////////////////////////////////////////
+// function addBinary(a, b) {
+//     let carry = 0;
+//     let result = "";
+//     let i = a.length - 1, j = b.length - 1;
+//     while (i >= 0 || j >= 0 || carry) {
+//         let sum = carry;
+//         if (i >= 0) {
+//             sum += parseInt(a.charAt(i));
+//             i--;
+//         }
+//         if (j >= 0) {
+//             sum += parseInt(b.charAt(j));
+//             j--;
+//         }
+//         carry = sum >= 2 ? 1 : 0;
+//         result = (sum % 2) + result;
+//     }
+//     return result;
+// }
