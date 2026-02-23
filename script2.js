@@ -76,3 +76,10 @@
 //     }
 //     return result;
 // }
+///
+// const majorityElement = function(nums) {
+//     const result = {};
+//     const len = nums.length / 2;
+//     nums.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
+//     return +Object.keys(result).filter(num => result[num] > len).join('');
+// };
