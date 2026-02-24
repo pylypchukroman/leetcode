@@ -83,3 +83,19 @@
 //     nums.forEach(num => result[num] = result[num] ? result[num] + 1 : 1);
 //     return +Object.keys(result).filter(num => result[num] > len).join('');
 // };
+
+///////////////////
+
+// const findTheDifference = function(s, t) {
+//     const count = {};
+//     for (let char of s) {
+//         count[char] = (count[char] || 0) + 1;
+//     }
+//     for (let char of t) {
+//         if (!count[char]) {
+//             return char;
+//         }
+//         count[char]--;
+//     }
+//     return '';
+// };
